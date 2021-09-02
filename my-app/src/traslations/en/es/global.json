@@ -1,0 +1,13 @@
+{
+    "header":{
+        "buscador":"Buscar",
+        "ubicacion":"ubicación",
+        "registrarme":"registrarme",
+        "sesion":"iniciar sesión"
+    },
+
+    "footer":{
+        "España":"España",
+        "Usa":"Estados Unidos"
+    }
+}

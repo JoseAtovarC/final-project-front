@@ -1,0 +1,12 @@
+
+.bar-container{
+    display: flex;
+    justify-content: space-between;
+}
+.inp-date-container{
+    display: flex;    
+}
+
+p{
+    color:black;
+}
