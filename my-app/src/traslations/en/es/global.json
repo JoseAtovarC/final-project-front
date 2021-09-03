@@ -1,13 +1,73 @@
 {
     "header":{
         "buscador":"Buscar",
+        "ayuda":"ayuda",
         "ubicacion":"ubicación",
         "registrarme":"registrarme",
         "sesion":"iniciar sesión"
     },
 
+    "sectionInfo":{
+        "ComoFunciona":"¿Como funciona?",
+        "resFunciona":"Busca y contacta con mozos dispuestos a ayudarte en tu ciudad ",
+        "Reserva":"Reserva",
+        "resReserv":"Encuentra el mozo que mejor se adapte a lo que necesites y contactalo a traves de nuestra plataforma",
+        "porque":"¿Por que?",
+        "res1":"Encuentra el servicio de ayuda  para tu mudanza ",
+       "res2": "que mejor se adpate a tus necesidades a un precio muy bajo.",
+       "res3": "Para nosotros, es muy importante conocer a nuestros usuarios.",
+       "res4": "Por eso, examinamos atentamente las opiniones",
+       "res5": " y los perfiles de nuestros usuarios para que sepas con quién vas a viajar.",
+       "res6":"¡Reservar es muy sencillo gracias a nuestra sencilla aplicación y a su tecnología."
+
+    },
+    "sectionServicios":{
+        "servicios":"Servicios que puedes obtener",
+        "ayuda":"Ayuda en tu mudanza",
+        "resAyuda":"Busca alguien para que te eche una mano con tu mudanza pagando un precio muy bajo",
+        "servCompleto":"Servicio de mudanza completo",
+        "res1":"Alguno de nuestros mozos pueden llegar a ofrecer el servicio completo ",
+        "res2":"con disposicion de su coche a un precio mucho mas economico  que un servicio de mudanza convencional.",
+       "otraAyuda": "Otro tipo de ayudas",
+       "res3": "Puedes solicitar a alguno de nuestros mozos ayuda con algun traslado grande",
+       "res4": "ya sea un mueble, armarios, mesas etc."
+    },
+    "sectionPreguntas":{
+        "preguntasFreq":"Preguntas Frecuentes",
+        "esSeguro":"¿Es seguro contratar los mozos?",
+        "res1":"Estamos comprometidos a proporcionar un entorno seguro para nuestros usuarios",
+        "res2":" nuestros mozos  muestran la experiencia, las cualificaciones",
+        "res3":"así como las calificaciones y los comentarios de otros clientes.",
+        "pago":"¿Cómo puedo pagar una reserva?",
+       "res4": "Una vez que hayas encontrado al mozo adecuado para lo que necesites",
+       "res5": "en su perfil podras contactarlo y acordar el metodo de pago que mejor les resulte.",
+       "cancelar": "¿Puedo cancelar una reserva?",
+       "res6":"¡Sí, por supuesto! Entendemos que los planes pueden cambiar, ",
+       "res7":"por eso todas las reservas son cancelables",
+       "res8":"en cualquier momento hasta 24 horas antes del inicio de una reserva."
+    },
+
+    
+    "form":{
+        "registroTitle":"Regístrate como cliente",
+        "sesion":"Iniciar sesión",
+        "correo":"Correo electrónico",
+        "Contraseña":"Contraseña",
+        "confirmaContraseña":"Confirma tu Contraseña",
+        "sesionbtn":"Inicia sesión",
+        "registrobtn":"Registrarme",
+        "terminosCheckbox":"Acepto los Términos de servicio de xxx",
+        "recordarContraseña":"¿Has olvidado tu contraseña?",
+        "recordarCorreo":"¿Has olvidado tu correo?"
+        
+    },
     "footer":{
         "España":"España",
-        "Usa":"Estados Unidos"
+        "Usa":"Estados Unidos",
+        "sobrenosotros":"sobre nosotros",
+        "contacto":"contacto",
+        "ayuda":"ayuda"
+
     }
+   
 }

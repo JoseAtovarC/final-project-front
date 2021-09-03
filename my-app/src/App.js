@@ -1,5 +1,6 @@
 import Home from './pages/home';
 import Wrapper from './componentes/wrapper';
+import UserPage from './pages/userPage';
 import {
   BrowserRouter as Router,
   Switch,
@@ -29,8 +30,6 @@ function App() {
     <Wrapper>
       <I18nextProvider i18n={i18next} >
         <Router>
-       
-
         <Switch>
 
           <Route exact path="/">
@@ -47,6 +46,10 @@ function App() {
 
       <Route exact path="/login">
       <Login></Login>
+      </Route>
+      
+      <Route exact path="/user">
+      <UserPage></UserPage>
       </Route>
 
       </Switch>

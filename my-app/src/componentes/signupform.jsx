@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { Fragment } from 'react';
 import '../pages/home.css';
 import { useTranslation } from 'react-i18next';
@@ -9,17 +9,28 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import { useHistory} from 'react-router-dom'
 
 function SignupForm() {
   const [t, i18n] = useTranslation("global");
   const [passwordAlert, setpasswordAlert] = useState("")
+  const [redirect, setRedirect] = useState(false)
+  const history = useHistory();
+
+  // useEffect(()=>{
+  //   if(redirect !==false){
+  //       history.push('/login')
+  //   }else{
+  //     console.log('no')
+  //   }
+  // })
 
   return (
     <Fragment>
       <Container maxWidth="xs">
-        <div >
-          <p >{t("logins.registro")}</p>
-        </div>
+        
+          <h2 >{t("form.registroTitle")}</h2>
+        
         <form onSubmit={(e) => {
           e.preventDefault()
           if (e.target[2].value === e.target[4].value) {
@@ -42,7 +53,7 @@ function SignupForm() {
                 }
                 return response;
               }).then(function (response) {
-                console.log("ok");
+              history.push('/login');
               }).catch(function (error) {
                 setpasswordAlert('Upps User is already registreded!!')
               })
@@ -57,7 +68,7 @@ function SignupForm() {
                 <Grid item xs={12}>
                   <TextField
                     fullWidth
-                    label={t("logins.Correo")}
+                    label={t("form.correo")}
                     onChange={() => setpasswordAlert("")}
                     name="Correo"
                     size="small"
@@ -69,7 +80,7 @@ function SignupForm() {
                 <Grid item xs={12}>
                   <TextField
                     fullWidth
-                    label={t("logins.Contraseña")}
+                    label={t("form.Contraseña")}
                     name="password"
                     size="small"
                     type="password"
@@ -79,7 +90,7 @@ function SignupForm() {
                 <Grid item xs={12}>
                   <TextField
                     fullWidth
-                    label={t("logins.Recordar")}
+                    label={t("form.confirmaContraseña")}
                     name="remember"
                     size="small"
                     type="password"
@@ -92,13 +103,13 @@ function SignupForm() {
             <Grid item xs={12}>
               <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" color="primary" />}
-                label={t("logins.politica")}
+                label={t("form.terminosCheckbox")}
                 style={{ color: "#252E41" }}
               />
               <p style={{ color: "#252E41", fontSize: "1.5rem" }}>{passwordAlert}</p>
               <div className="btnLog-container">
                 <Button className="btn-sesion" type="submit" variant="contained">
-                  {t("logins.registrarse")}
+                  {t("form.registrobtn")}
                 </Button>
               </div>
             </Grid>

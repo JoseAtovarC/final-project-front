@@ -8,7 +8,11 @@ import React from 'react';
    header:{
     display:'flex',
     justifyContent:'space-between',
-   }   
+   },
+   backdrop: {
+    zIndex: theme.zIndex.drawer + 1,
+    color: '#fff',
+  },   
 }));
 
 export const theme = createTheme({

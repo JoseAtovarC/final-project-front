@@ -50,21 +50,22 @@ function Header() {
           </Link>
 
           <div className="bar-container">
-            <Link to="/ayuda">
+            <Link style={{marginRight:"1rem"}} to="/ayuda">
+              <p>{t("header.buscador")}</p>
+            </Link>
+            <Link style={{marginRight:"1rem"}} to="/ayuda">
+              <p>{t("header.ubicacion")}</p>
+            </Link>
+            <Link style={{marginRight:"1rem"}} to="/ayuda">
               <p>{t("header.ayuda")}</p>
             </Link>
-            <Link to="/ayuda">
-              <p>{t("header.ayuda")}</p>
-            </Link>
-            <Link to="/ayuda">
-              <p>{t("header.ayuda")}</p>
-            </Link>
-            <Link to="/signup">
+            <Link style={{marginRight:"1rem"}} to="/signup">
               <p>{t("header.registrarme")}</p>
             </Link>
-            <Link to="/login">
+            <Link style={{marginRight:"1rem"}} to="/login">
               <p>{t("header.sesion")}</p>
             </Link>
+
             <IconButton
               aria-label="account of current user"
               aria-controls="menu-appbar"

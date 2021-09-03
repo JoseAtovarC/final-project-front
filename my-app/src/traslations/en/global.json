@@ -1,8 +1,70 @@
 {
     "header":{
         "buscador":"Search",
-        "ubicacion":""
+        "ubicacion":"location",
+        "registrarme":"register",
+        "sesion":"login",
+        "ayuda":"help"
         
+    },
+    
+    "sectionInfo":{
+        "ComoFunciona":"How does it work?",
+        "resFunciona":"Search and contact waiters willing to help you in your city ",
+        "Reserva":"Book",
+        "resReserv":"Find the waiter that best suits your needs and contact him through our platform",
+        "porque":"Why?",
+        "res1":"Find the help service for your move",
+       "res2": "who better to contact for your move that best suits your needs at a very low price",
+       "res3":"For us, it is very important to know our users.",
+       "res4": "That's why we carefully examine the opinions.",
+       "res5":  "and the profiles of our users so that you know who you will be traveling with.",
+       "res6":"Booking is very easy thanks to our simple application and technology."
+
+    },
+    "sectionServicios":{
+        "servicios":"Services you can get",
+        "ayuda":"Help with your move",
+        "resAyuda":"Find someone to give you a hand with your move for a very low price",
+        "servCompleto":"Complete moving service",
+        "res1": "Some of our movers may be able to offer the full service",
+        "res2":"with disposal of your car at a much cheaper price than a conventional moving service",
+       "otraAyuda": "Other kind of help",
+       "res3":  "You can ask one of our movers to help you with a big move",
+       "res4": "whether it is a piece of furniture, cabinets, tables etc."
+    },
+    "sectionPreguntas":{
+        "preguntasFreq":"Frequently Asked Questions",
+        "esSeguro":"Is it safe to hire waiters?",
+        "res1":"We are committed to providing a safe environment for our users",
+        "res2":"our waiters show experience, qualifications",
+        "res3":"as well as ratings and comments from other customers",
+        "pago":"How can I pay for a reservation?",
+       "res4":"Once you have found the right waiter for what you need.",
+       "res5":"in his profile you can contact him and agree on the payment method that works best for you",
+       "cancelar": "Can I cancel a reservation?",
+       "res6":"Yes, of course! We understand that plans can change",
+       "res7":"that's why all reservations are cancellable",
+       "res8":"at any time up to 24 hours before the start of a reservation"
+    },
+    "form":{
+        "registroTitle":"Regístrate como cliente",
+        "sesion":"Iniciar sesión",
+        "correo":"Correo electrónico",
+        "Contraseña":"Contraseña",
+        "confirmaContraseña":"Confirma tuContraseña",
+        "sesionbtn":"Inicia sesión",
+        "registrobtn":"Registrarme",
+        "terminosCheckbox":"Acepto los Términos de servicio de xxx",
+        "recordarContraseña":"¿Has olvidado tu contraseña?",
+        "recordarCorreo":"¿Has olvidado tu correo?"
+        
+    },
+
+    "footer":{
+        "España":"Spain",
+        "Usa":"United State"
     }
+
     
 }
