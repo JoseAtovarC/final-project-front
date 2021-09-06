@@ -1,0 +1,26 @@
+
+.check-image {
+  width: 4rem;
+}
+
+.p-check {
+  text-align: center;
+  font-style: Bold;
+  font-size: 21px;
+  fill: solid black;
+}
+.check-card {
+  width: 378px;
+  height: 553px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 2px 2px black;
+}
+
+
+
+

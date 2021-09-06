@@ -9,9 +9,11 @@
 
     "sectionInfo":{
         "ComoFunciona":"¿Como funciona?",
-        "resFunciona":"Busca y contacta con mozos dispuestos a ayudarte en tu ciudad ",
+        "resFunciona":"Busca y contacta con ayudantes ",
+        "resFunciona2":"dispuestos a ayudarte en tu ciudad",
         "Reserva":"Reserva",
-        "resReserv":"Encuentra el mozo que mejor se adapte a lo que necesites y contactalo a traves de nuestra plataforma",
+        "resReserv":"Encuentra el mozo que mejor se adapte ",
+        "resReserv2":"a lo que necesites y contactalo a traves de nuestra plataforma",
         "porque":"¿Por que?",
         "res1":"Encuentra el servicio de ayuda  para tu mudanza ",
        "res2": "que mejor se adpate a tus necesidades a un precio muy bajo.",
@@ -33,7 +35,7 @@
        "res4": "ya sea un mueble, armarios, mesas etc."
     },
     "sectionPreguntas":{
-        "preguntasFreq":"Preguntas Frecuentes",
+        "preguntasFreq":"Preguntas Frecuentes (FAQ)",
         "esSeguro":"¿Es seguro contratar los mozos?",
         "res1":"Estamos comprometidos a proporcionar un entorno seguro para nuestros usuarios",
         "res2":" nuestros mozos  muestran la experiencia, las cualificaciones",

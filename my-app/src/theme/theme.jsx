@@ -3,11 +3,19 @@ import React from 'react';
  import { createTheme } from '@material-ui/core/styles';
  
  export const useStyles = makeStyles((theme) => ({
-    root: {
-    },
+  search: {
+    backgroundColor: 'white',
+    width: 'auto',
+    padding: '2rem',
+    marginLeft:'2rem',
+    borderRadius: '4px',
+    boxShadow:' 0px 2px 2px rgba(0, 0, 0, 0.5)',
+        
+      },
    header:{
     display:'flex',
     justifyContent:'space-between',
+    backgroundColor:"primary"
    },
    backdrop: {
     zIndex: theme.zIndex.drawer + 1,
@@ -16,19 +24,28 @@ import React from 'react';
 }));
 
 export const theme = createTheme({
-  root:{
-    background: "#eeeeee",
-  }
-});
+  palette: {
+    primary: {
+      main:"rgb(253, 94, 66)"
+  
+    },
+    secondary: {
+      main:"rgb(15, 15, 136)"
+    },
+}});
 
 export const darktheme = createTheme({
-  root:{
-    background: "#222222"
-
-    }
+  palette: {
+    primary: {
+      main:"#7986cb"
   
-});
+    },
+    secondary: {
+      main:"rgb(15, 15, 136)"
+    },
+  
+}});
 
-const ThemeContexts = React.createContext(theme.root)
+const ThemeContexts = React.createContext(theme.palette.primary)
 
 export{ThemeContexts}

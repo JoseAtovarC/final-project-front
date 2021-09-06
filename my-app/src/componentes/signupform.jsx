@@ -9,31 +9,25 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-import { useHistory} from 'react-router-dom'
+import Verificated from './verificated';
+
 
 function SignupForm() {
   const [t, i18n] = useTranslation("global");
   const [passwordAlert, setpasswordAlert] = useState("")
-  const [redirect, setRedirect] = useState(false)
-  const history = useHistory();
-
-  // useEffect(()=>{
-  //   if(redirect !==false){
-  //       history.push('/login')
-  //   }else{
-  //     console.log('no')
-  //   }
-  // })
+  const [check, setCheck] = useState("")
 
   return (
     <Fragment>
-      <Container maxWidth="xs">
+   {check === ''?   <Container maxWidth="xs">
         
           <h2 >{t("form.registroTitle")}</h2>
         
         <form onSubmit={(e) => {
           e.preventDefault()
-          if (e.target[2].value === e.target[4].value) {
+          if (e.target[0].value !==""){
+          if (e.target[2].value === e.target[4].value ) {
+            if(e.target[2].value.length>5){
             const USER = {
               email: e.target[0].value,
               password: e.target[2].value,
@@ -52,15 +46,19 @@ function SignupForm() {
                   throw Error(response.status);
                 }
                 return response;
-              }).then(function (response) {
-              history.push('/login');
-              }).catch(function (error) {
+              }).then(data=>{  
+           setCheck("check")
+             } ).catch(function (error) {
                 setpasswordAlert('Upps User is already registreded!!')
               })
-          } else {
+          }else{
+              setpasswordAlert("la contraseña debe contener mas de 5 caracteres")
+          } }else {
             setpasswordAlert("las contraseñas deben coincidir")
           }
-        }}>
+        }else{
+          setpasswordAlert("Debes rellenar todos los campos")
+        }}}>
 
           <Grid container spacing={3}>
             <Grid item xs={12}>
@@ -99,7 +97,6 @@ function SignupForm() {
                 </Grid>
               </Grid>
             </Grid>
-
             <Grid item xs={12}>
               <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" color="primary" />}
@@ -108,14 +105,15 @@ function SignupForm() {
               />
               <p style={{ color: "#252E41", fontSize: "1.5rem" }}>{passwordAlert}</p>
               <div className="btnLog-container">
-                <Button className="btn-sesion" type="submit" variant="contained">
+                <Button className="btn-sesion"  type="submit" variant="contained">
+
                   {t("form.registrobtn")}
                 </Button>
               </div>
             </Grid>
           </Grid>
         </form>
-      </Container>
+      </Container>:<Verificated></Verificated>}
     </Fragment>
   );
 }

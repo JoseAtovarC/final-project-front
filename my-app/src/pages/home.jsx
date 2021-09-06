@@ -14,35 +14,58 @@ function Home() {
   const [modo] = useContext(ThemeContexts)
   return (
     <Fragment>
-      <Paper style={{ background: modo.background }}>
+      <Paper style={{backgroundColor:modo.primary}}>
         <Header></Header>
-        <section>
+
+        <section className="section-container">
           <h2>{t("sectionInfo.ComoFunciona")}</h2>
-          <p>{t("sectionInfo.resFunciona")}</p>
-          <h2>{t("sectionInfo.Reserva")}</h2>
-          <p>{t("sectionInfo.resReserv")}</p>
-          <h2>{t("sectionInfo.porque")}</h2>
-          <p>{t("sectionInfo.res1")}</p>
-          <p>{t("sectionInfo.res2")}</p>
-          <p>{t("sectionInfo.res3")}</p>
-          <p>{t("sectionInfo.res4")}</p>
-          <p>{t("sectionInfo.res5")}</p>
-          <p>{t("sectionInfo.res6")}</p>
-        </section>
+          <div className="info-container">
+            <div>
+            <h2>Busca</h2>
+            <p>{t("sectionInfo.resFunciona")}<br></br>{t("sectionInfo.resFunciona2")}</p>
+            </div>
+            <div className="info">
+            <h2>{t("sectionInfo.Reserva")}</h2>
+            
+            <p>{t("sectionInfo.resReserv")}<br></br>{t("sectionInfo.resReserv2")}</p>
+            </div>
+            <div className="info">
+            <h2>{t("sectionInfo.porque")}</h2>
+            <p>{t("sectionInfo.res1")}<br></br>{t("sectionInfo.res2")}
+            <br></br>{t("sectionInfo.res3")}
+            <br></br>{t("sectionInfo.res4")}
+            <br></br>{t("sectionInfo.res5")}
+            <br></br>{t("sectionInfo.res6")}
+            </p>
      
-        <section>
-          <h2>{t("sectionServicios.servicios")}</h2>
-          <h3>{t("sectionServicios.ayuda")}</h3>
-          <p>{t("sectionServicios.resAyuda")}</p>
-          <h3>{t("sectionServicios.servCompleto")}</h3>
-          <p>{t("sectionServicios.res1")}</p>
-          <p>{t("sectionServicios.res2")}</p>
-          <h3>{t("sectionServicios.otraAyuda")}</h3>
-          <p>{t("sectionServicios.res3")}</p>
-          <p>{t("sectionServicios.res4")}</p>
+            </div>
+          </div>
         </section>
-        <section>
+
+        <div className="barra-section" ></div>
+
+        <section className="section-container">
+          <h2>{t("sectionServicios.servicios")}</h2>
+          <div className="info-container">
+            <div className="info">
+            <h3>{t("sectionServicios.ayuda")}</h3>
+            <p>{t("sectionServicios.resAyuda")}</p>
+            </div>
+            <div className="info">
+            <h3>{t("sectionServicios.servCompleto")}</h3>
+            <p>{t("sectionServicios.res1")} <br></br> {t("sectionServicios.res2")}</p>     
+            </div>
+            <div className="info">
+            <h3>{t("sectionServicios.otraAyuda")}</h3>
+            <p>{t("sectionServicios.res3")} <br></br>{t("sectionServicios.res4")}</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="section-faq">
+         
           <h2>{t("sectionPreguntas.preguntasFreq")}</h2>
+          <ul className="section-faq">
           <h3>{t("sectionPreguntas.esSeguro")}</h3>
           <p>{t("sectionPreguntas.res1")}</p>
           <p>{t("sectionPreguntas.res2")}</p>
@@ -54,6 +77,7 @@ function Home() {
           <p>{t("sectionPreguntas.res6")}</p>
           <p>{t("sectionPreguntas.res7")}</p>
           <p>{t("sectionPreguntas.res8")}</p>
+          </ul>
         </section>
         <Footer></Footer>
       </Paper>

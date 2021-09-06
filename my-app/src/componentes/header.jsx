@@ -1,21 +1,16 @@
 import '../componentes/header.css';
 import React from 'react';
-import { useState } from 'react';
-import { useContext } from 'react'
-import { ThemeContexts } from '../theme/theme';
 import AppBar from '@material-ui/core/AppBar';
+import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import WbSunnyIcon from '@material-ui/icons/WbSunny';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import Switch from '@material-ui/core/Switch';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormGroup from '@material-ui/core/FormGroup';
-import Brightness3Icon from '@material-ui/icons/Brightness3';
 import { useStyles } from '../theme/theme';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
+import { useContext } from 'react'
+import { ThemeContexts } from '../theme/theme';
 import { useTranslation } from 'react-i18next';
 import Button from '@material-ui/core/Button';
 import {
@@ -25,44 +20,51 @@ import {
 function Header() {
   const classes = useStyles();
   const [t, i18n] = useTranslation("global");
-  const [auth, setAuth] = useState(true);
-  const [modo, setTheme] = useContext(ThemeContexts);
-
-  const handleChange = (event) => {
-    setAuth(event.target.checked);
-  };
-
+  const [modo] = useContext(ThemeContexts)
 
   return (
     <div className="header-container">
 
-      <AppBar className={classes.header} position="static">
-        <FormGroup>
-          <FormControlLabel
-            control={<Switch checked={auth} onChange={handleChange} onClick={() => setTheme()}
-              aria-label="login switch" />}
-            label={auth ? <Brightness3Icon></Brightness3Icon> : <WbSunnyIcon></WbSunnyIcon>}
-          />
-        </FormGroup>
+      <AppBar  className={classes.header} position="static">
+
         <Toolbar className="bar-container" >
           <Link to="/">
             <p>💩</p>
           </Link>
 
-          <div className="bar-container">
-            <Link style={{marginRight:"1rem"}} to="/ayuda">
+              <div className="btn-nav">
+              <IconButton 
+               color="inherit"
+            aria-label="open drawer"
+            edge="end">
+               <MenuIcon
+                />
+            </IconButton>
+            </div>
+
+          <div className="nav-container">
+         
+            <Link style={{ marginRight: "1rem" }} to="/ayuda">
               <p>{t("header.buscador")}</p>
             </Link>
-            <Link style={{marginRight:"1rem"}} to="/ayuda">
-              <p>{t("header.ubicacion")}</p>
+            <div className="barra-nav"></div>
+
+
+            <Link style={{ marginRight: "1rem" }} to="/ayuda">
+              <p>{t("header.buscador")}</p>
             </Link>
-            <Link style={{marginRight:"1rem"}} to="/ayuda">
+            <div className="barra-nav"></div>
+
+            <Link style={{ marginRight: "1rem" }} to="/ayuda">
               <p>{t("header.ayuda")}</p>
             </Link>
-            <Link style={{marginRight:"1rem"}} to="/signup">
+            <div className="barra-nav"></div>
+
+            <Link style={{ marginRight: "1rem" }} to="/signup">
               <p>{t("header.registrarme")}</p>
             </Link>
-            <Link style={{marginRight:"1rem"}} to="/login">
+            <div className="barra-nav"></div>
+            <Link style={{ marginRight: "1rem" }} to="/login">
               <p>{t("header.sesion")}</p>
             </Link>
 
@@ -78,41 +80,40 @@ function Header() {
         </Toolbar>
       </AppBar>
 
-
-      <Container maxWidth="xs">
-        <form >
-          <Grid container spacing={3}>
-            <Grid item xs={12}>
-              <TextField
-                fullWidth
-                variant="outlined"
-                label={t("header.ubicacion")}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <div className="inp-date-container">
+      <div className="second-header-container" >
+        <Container className={classes.search} maxWidth="xs">
+          <h2>Encuentra al ayudante ideal <br />para tu mudanza</h2>
+          <h5>tu alternativa a los servicios tradicionales</h5>
+          <form >
+            <Grid container spacing={3}>
+              <Grid item xs={12}>
+                <h4>Estoy buscando</h4>
                 <TextField
                   fullWidth
+                  select
                   variant="outlined"
-                  type="date"
-                  style={{ marginRight: "1.5rem" }}
+                  label={t("header.ubicacion")}
+
                 />
+              </Grid>
+              <Grid item xs={12}>
+                <h4>Fecha</h4>
                 <TextField
                   fullWidth
                   type="date"
                   variant="outlined"
                 />
-              </div>
-            </Grid>
-            <Grid item xs={12}>
-              <Button color="secondary" fullWidth type="submit" variant="contained">
-                {t("header.buscador")}
-              </Button>
-            </Grid>
 
-          </Grid>
-        </form>
-      </Container>
+              </Grid>
+              <Grid item xs={12}>
+                <Button color="secondary" fullWidth type="submit" variant="contained">
+                  {t("header.buscador")}
+                </Button>
+              </Grid>
+            </Grid>
+          </form>
+        </Container>
+      </div>
     </div>
   );
 

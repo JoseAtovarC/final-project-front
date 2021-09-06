@@ -65,9 +65,10 @@ function LoginForm() {
           },
         })
           .then(res => res.json())
-          .then(data => {
+          .then(data => { console.log('hola')
             setToken(data.access_token)
             console.log(token)
+            sessionStorage.setItem('token', token)
           })
 
       }}>
