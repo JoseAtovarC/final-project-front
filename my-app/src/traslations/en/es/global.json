@@ -1,14 +1,17 @@
 {
     "header":{
         "buscador":"Buscar",
-        "ayuda":"ayuda",
-        "ubicacion":"ubicación",
-        "registrarme":"registrarme",
-        "sesion":"iniciar sesión"
+        "ayuda":"Ayuda",
+        "ubicacion":"Ubicación",
+        "registrarme":"Registrarme",
+        "sesion":"Iniciar Sesión",
+        "convertirse":"Convertirse en Ayudante"
+
     },
 
     "sectionInfo":{
         "ComoFunciona":"¿Como funciona?",
+        "busca":"Busca",
         "resFunciona":"Busca y contacta con ayudantes ",
         "resFunciona2":"dispuestos a ayudarte en tu ciudad",
         "Reserva":"Reserva",
@@ -49,9 +52,16 @@
        "res8":"en cualquier momento hasta 24 horas antes del inicio de una reserva."
     },
 
-    
+    "search":{
+        "searchTitle1":" Encuentra al ayudante",
+        "searchTitle2":" ideal para tu mudanza",
+        "searchTitle3":"tu alternativa a los servicios tradicionales",
+        "buscando":"Estoy buscando",
+        "fecha":"Fecha"
+        
+    },   
     "form":{
-        "registroTitle":"Regístrate como cliente",
+        "registroTitle":"Regístrate",
         "sesion":"Iniciar sesión",
         "correo":"Correo electrónico",
         "Contraseña":"Contraseña",
@@ -60,15 +70,24 @@
         "registrobtn":"Registrarme",
         "terminosCheckbox":"Acepto los Términos de servicio de xxx",
         "recordarContraseña":"¿Has olvidado tu contraseña?",
-        "recordarCorreo":"¿Has olvidado tu correo?"
-        
+        "recordarCorreo":"¿Has olvidado tu correo?" , 
+        "nombre":"Nombre",
+        "apellidos":"Apellidos",
+        "telefono":"Telefono",
+        "provincia":"Provincia",
+        "ciudad":"Ciudad",
+        "codigo-postal":"Codigo Postal",
+        "direccion":"Dirección",
+        "tarifa":"Tarifa",
+        "servicio":"Servicio",
+        "guardarBtn":"Guardar"
     },
     "footer":{
         "España":"España",
         "Usa":"Estados Unidos",
-        "sobrenosotros":"sobre nosotros",
-        "contacto":"contacto",
-        "ayuda":"ayuda"
+        "sobrenosotros":"Sobre Nosotros",
+        "contacto":"Contacto",
+        "ayuda":"Ayuda"
 
     }
    

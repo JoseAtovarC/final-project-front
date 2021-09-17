@@ -1,0 +1,25 @@
+.signup-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:#37343B ;
+ 
+}
+
+.signup{
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+}
+    .logo{
+        margin-top: 1.5rem;
+        width: 20rem;
+        
+    }
+    .select{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        
+    }

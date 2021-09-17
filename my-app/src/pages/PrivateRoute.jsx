@@ -1,17 +1,40 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import User from '../page/user'
-import useAuth from '../page/hooks'
+import ClientPage from './clientPage/userPage';
+import {useAuth} from '../hooks/hooks';
+import HelperPage from './helperPage/index';
 
-const PrivateRoute = () => {
+import PerfilPage from './perfilPage/perfilPage';
+
+export const PrivateRoute = () => {
   let check=useAuth()
     return (
         <Route  render={() => (
            check ?
-                <User/>
-            : <Redirect  to="/"/>
+                <ClientPage/>
+            : <Redirect  to="/signup"/>
         )} />
     );
 };
 
-export default PrivateRoute;
+export const PrivateRouteHelper = () => {
+    let check=useAuth()
+      return (
+          <Route  render={() => (
+             check ?
+                  <HelperPage/>
+              : <Redirect  to="/signup"/>
+          )} />
+      );
+  };
+
+  export const PrivateRoutePerfil = () => {
+    let check=useAuth()
+      return (
+          <Route  render={() => (
+             check ?
+                  <PerfilPage/>
+              : <Redirect  to="/signup"/>
+          )} />
+      );
+  };

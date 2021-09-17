@@ -1,0 +1,69 @@
+
+.bar-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+}
+.search-icon{
+    margin-top: 1rem;
+    color:white;
+    margin-right: 0.2rem;
+    width: 2rem;
+    font-size: 1.5rem;
+}
+.inp-date-container{
+    display: flex;    
+}
+
+.title-search{
+    color:black
+}
+p{
+    color:black;
+}
+
+.barra-nav {
+    width: 1px;
+    height: 1.5rem;
+    background-color: white;
+    margin-right: 2rem;
+    margin-top: 1rem;
+  }
+
+
+  .second-header-container{
+    background-image: url("../../assets/secondHeader.png");
+    background-attachment: fixed;
+    background-size: cover;
+
+      padding: 2rem;
+      display: flex;
+      justify-content: left;
+  }
+  .search-container{
+      background-color: white;
+      margin-left: 2rem;
+  }
+  .btn-nav{
+      display: none;
+  }
+
+  .logo{
+      width: 20rem;
+      
+  }
+
+  @media (max-width: 800px) {
+    .nav-container{
+        display: none;
+      
+    }
+    .btn-nav{
+        display: flex;
+       
+    }
+}

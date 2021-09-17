@@ -1,0 +1,7 @@
+.about-container{
+    background-image: url('../../assets/aboutUs.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}

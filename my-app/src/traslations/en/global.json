@@ -1,15 +1,17 @@
 {
     "header":{
         "buscador":"Search",
-        "ubicacion":"location",
-        "registrarme":"register",
-        "sesion":"login",
-        "ayuda":"help"
+        "ubicacion":"Location",
+        "registrarme":"Register",
+        "sesion":"Login",
+        "ayuda":"Help",
+        "convertirse":"Become a helper"
         
     },
     
     "sectionInfo":{
         "ComoFunciona":"How does it work?",
+        "busca":"search",
         "resFunciona":"Search and contact waiters willing to help you in your city ",
         "Reserva":"Book",
         "resReserv":"Find the waiter that best suits your needs and contact him through our platform",
@@ -48,22 +50,43 @@
        "res8":"at any time up to 24 hours before the start of a reservation"
     },
     "form":{
-        "registroTitle":"Regístrate como cliente",
-        "sesion":"Iniciar sesión",
-        "correo":"Correo electrónico",
-        "Contraseña":"Contraseña",
-        "confirmaContraseña":"Confirma tuContraseña",
-        "sesionbtn":"Inicia sesión",
-        "registrobtn":"Registrarme",
-        "terminosCheckbox":"Acepto los Términos de servicio de xxx",
-        "recordarContraseña":"¿Has olvidado tu contraseña?",
-        "recordarCorreo":"¿Has olvidado tu correo?"
+        "registroTitle":"Register as a client",
+        "sesion":"Login",
+        "correo":"Email",
+        "Contraseña":"Password",
+        "confirmaContraseña":"Confirm your Password",
+        "sesionbtn":"Log in",
+        "registrobtn":"Register me",
+        "terminosCheckbox":"I accept terms and conditions xxx",
+        "recordarContraseña":"Forgot your Password?",
+        "recordarCorreo":"Forgot your Email?",
+        "nombre":"Name",
+        "apellidos":"Last Name",
+        "telefono":"Phone",
+        "provincia":"State",
+        "ciudad":"City",
+        "codigo-postal":"Postal Code",
+        "direccion":"Address",
+        "tarifa":"Plan",
+        "servicio":"Service",
+        "guardarBtn":"Save"
         
     },
+    "search":{
+        "searchTitle1":" Find a Helper",
+        "searchTitle2":" ideal for your move",
+        "searchTitle3":"your alternative from traditional services",
+        "buscando":"I'm looking for",
+        "fecha":"Date"
+        
+    },   
 
     "footer":{
         "España":"Spain",
-        "Usa":"United State"
+        "Usa":"United States",
+        "sobrenosotros":"About Us",
+        "contacto":"Contact",
+        "ayuda":"Help"
     }
 
     
