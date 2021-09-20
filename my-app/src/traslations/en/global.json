@@ -21,7 +21,9 @@
        "res3":"For us, it is very important to know our users.",
        "res4": "That's why we carefully examine the opinions.",
        "res5":  "and the profiles of our users so that you know who you will be traveling with.",
-       "res6":"Booking is very easy thanks to our simple application and technology."
+       "res6":"Booking is very easy thanks to our simple application and technology.",
+       "quienes":"¿About us?",
+       "porqueGo":"¿Why Gomoving?"
 
     },
     "sectionServicios":{
@@ -34,6 +36,7 @@
        "otraAyuda": "Other kind of help",
        "res3":  "You can ask one of our movers to help you with a big move",
        "res4": "whether it is a piece of furniture, cabinets, tables etc."
+      
     },
     "sectionPreguntas":{
         "preguntasFreq":"Frequently Asked Questions (FAQ)",
@@ -57,7 +60,7 @@
         "confirmaContraseña":"Confirm your Password",
         "sesionbtn":"Log in",
         "registrobtn":"Register me",
-        "terminosCheckbox":"I accept terms and conditions xxx",
+        "terminosCheckbox":"I accept terms and conditions Gomoving",
         "recordarContraseña":"Forgot your Password?",
         "recordarCorreo":"Forgot your Email?",
         "nombre":"Name",
@@ -77,7 +80,12 @@
         "searchTitle2":" ideal for your move",
         "searchTitle3":"your alternative from traditional services",
         "buscando":"I'm looking for",
-        "fecha":"Date"
+        "fecha":"Date",
+        "tarifa":"tariff",
+        "placeHolder":"find near your city",
+        "ordena":"order from",
+        "mayor":"higher to lower",
+        "menor":"lower to higher"
         
     },   
 

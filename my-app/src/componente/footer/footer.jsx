@@ -36,33 +36,30 @@ function Footer() {
       <ul className="nav-footer">
         <li className="li-footer">
           <Link style={{textDecoration:"none"}} to="nosotros">
-          <Typography> {t("footer.sobrenosotros")}</Typography>
+          <Typography variant="h6"> {t("footer.sobrenosotros")}</Typography>
           </Link>
           </li>
         <div className="barra-footer"></div>
         <li className="li-footer"> 
         
-        <Link style={{textDecoration:"none"}} to="contacto"> <Typography>{t("footer.contacto")}</Typography></Link></li>
+        <Link style={{textDecoration:"none"}} to="contacto"> 
+        <Typography variant="h6">{t("footer.contacto")}</Typography></Link></li>
         <div className="barra-footer"></div>
 
         <li className="li-footer">           <Link  style={{textDecoration:"none"}} to="ayuda">
-          <Typography>          {t("footer.ayuda")}</Typography>
+          <Typography variant="h6">          {t("footer.ayuda")}</Typography>
  </Link ></li>
         <div className="barra-footer"></div>
         
 
-        <div className="socialIcon">
-          <img className="footer-logo" src={fb} alt=""></img>
-          <img className="footer-logo" src={ig} alt=""></img>
-          <img className="footer-logo" src={twi} alt=""></img>
-        </div>
+        
 
         <li onClick={() => i18n.changeLanguage("es")} className="li-footer">  <nav>
-          <Typography>        {t("footer.España")}</Typography>
+          <Typography variant="h6">        {t("footer.España")}</Typography>
    </nav></li>
         <div className="barra-footer"></div>
         <li  onClick={() => i18n.changeLanguage("en")} className="li-footer">  <nav>
-          <Typography>{t("footer.Usa")} </Typography>
+          <Typography variant="h6">{t("footer.Usa")} </Typography>
           </nav></li>
 
       </ul>

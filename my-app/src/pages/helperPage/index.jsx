@@ -13,6 +13,12 @@ import { Fragment } from 'react';
 import logoblue from '../../assets/logored.png'
 import { Link } from 'react-router-dom';
 import {useAuth,useFetch} from '../../hooks/hooks';
+import { Input } from '@material-ui/core';
+import InputLabel from '@material-ui/core/InputLabel'
+
+
+
+
 
 function HelperPage() {
   const [t] = useTranslation("global");
@@ -40,18 +46,31 @@ function HelperPage() {
       <Container  maxWidth="xs">
       <form onSubmit={(e)=>{
         e.preventDefault()
-       
+       console.log(e.target.image.value)
+       const Img={
+         perfilPicture:e.target.image.value
+       };  fetch('http://localhost:4000/upload', {
+        method: 'POST',
+        body: JSON.stringify(Img),
+        headers: {
+          'Content-Type': 'application/json',
+          "Authorization": `Bearer ${token}`
+        },
+      })
+        
+        .then(res =>res)
+
         const User={
-       nombre: e.target[0].value,
-       apellidos: e.target[2].value,
-       telefono: e.target[4].value,
-       provincia: e.target[6].value,
-        ciudad:e.target[8].value,
-        direccion:e.target[10].value,
-       codigo: e.target[12].value,
-        servicio:e.target[14].value,
-        tarifa:e.target[15].value,
-        informacion:e.target[17].value}
+       nombre: e.target.nombre.value,
+       apellidos: e.target.apellidos.value,
+       telefono: e.target.telefono.value,
+       provincia: e.target.Provincia.value,
+        ciudad:e.target.ciudad.value,
+        direccion:e.target.direccion.value,
+       codigo: e.target.codigo.value,
+        servicio:e.target.tarifa.value,
+        tarifa:e.target.servicio.value,
+        informacion:e.target.informacion.value}
         console.log(User)
         fetch('http://localhost:4000/user/ayudante', {
           method: 'PATCH',
@@ -61,7 +80,7 @@ function HelperPage() {
             "Authorization": `Bearer ${token}`
           },
         })
-          .then(res => res.json())
+          
           .then(res =>{ 
             if(res.ok) history.push("/perfil");
           })
@@ -69,6 +88,31 @@ function HelperPage() {
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <Grid container spacing={2}>
+            <Grid justifyContent="center" style={{marginTop:"1rem"}} item xs={12}>
+            <Input
+                      accept="image/*"
+                      id="contained-button-file"
+                      multiple
+                      type="file"
+                      style={{ display: "none" }}
+                      name="image"
+                     
+                    />
+                    <InputLabel
+                      htmlFor="contained-button-file"
+                    
+                    >
+                      <Button
+                       
+                        variant="contained"
+                        component="span"
+                        color="primary"
+                      >Sube una Foto</Button>
+                        
+                    </InputLabel>
+              </Grid>
+
+
               <Grid item xs={12}>
                 <TextField
                   fullWidth
@@ -134,7 +178,7 @@ function HelperPage() {
                 <TextField
                   fullWidth
                   label={t("form.codigo-postal")}
-                  name="codigo-postal"
+                  name="codigo"
                   size="small"
                   type="text"
                   variant="outlined"
@@ -179,7 +223,7 @@ function HelperPage() {
           label="Escribe sobre Ti"
           multiline
           rows={4}
-          // defaultValue=""
+          name="informacion"
           variant="outlined"
         />
               </Grid>

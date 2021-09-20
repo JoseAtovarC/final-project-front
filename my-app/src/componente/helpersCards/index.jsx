@@ -9,6 +9,8 @@ import { Divider } from '@material-ui/core';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import './index.css'
 import EuroIcon from '@material-ui/icons/Euro';
+import Avatar from '@material-ui/core/Avatar';
+import perfil from '../../assets/pruebaPerfil.jpg'
 
 
 
@@ -22,8 +24,20 @@ function HelpersCards(props) {
     <Fragment>
          
         <Container className={classes.helpercard}  spacing={3}>
-          <Grid   item xs={6}>
-           <Typography variant="h5">{props.nombre}</Typography>   
+           
+        
+
+          <Grid justifyContent="space-around"  item xs={12}>
+
+          <Grid    item xs={6}>
+          <Avatar alt="" src={perfil} />
+          </Grid> 
+
+          <Grid    item xs={12}>
+           <Typography variant="h5">{props.nombre}</Typography> 
+          </Grid>   
+
+          <Grid   item xs={12}>
            <LocationOnIcon></LocationOnIcon>
            <Typography color="secondary">{props.codigo},{props.ciudad}
            <span  > 
@@ -31,6 +45,9 @@ function HelpersCards(props) {
              {props.tarifa} <EuroIcon></EuroIcon> hr.</Typography>
            </span>
            </Typography>
+           </Grid> 
+
+           
            
           </Grid>   
         </Container>

@@ -12,6 +12,8 @@ import Verificated from '../verificated/verificated';
 import { useLocation } from "react-router-dom";
 import { useStyles } from '../../theme/theme';
 import { Typography } from '@material-ui/core';
+import Backdrop from '@material-ui/core/Backdrop';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -23,6 +25,7 @@ function SignupForm() {
   const [passwordAlert, setpasswordAlert] = useState("")
   const query = useQuery(); 
   const [isEmailValid, setEmailValidity] = useState(false); 
+  const [open, setOpen] = React.useState(false);
 
   useEffect(() => {
     
@@ -39,6 +42,13 @@ function SignupForm() {
       setEmailValidity(false); 
     }
   }, []);
+
+  const handleToggle = () => {
+    setOpen(!open);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <Fragment>
@@ -152,10 +162,13 @@ function SignupForm() {
             />
             <p style={{ color: "#252E41", fontSize: "1.5rem" }}>{passwordAlert}</p>
             <div className="btnLog-container">
-              <Button color="secondary" fullWidth  type="submit" variant="contained">
+              <Button color="secondary" fullWidth  onClick={handleToggle} type="submit" variant="contained">
 
                 {t("form.registrobtn")}
               </Button>
+              <Backdrop className={classes.backdrop} open={open} onClick={handleClose}>
+        <CircularProgress color="inherit" />
+      </Backdrop>
             </div>
           </Grid>
         </Grid>

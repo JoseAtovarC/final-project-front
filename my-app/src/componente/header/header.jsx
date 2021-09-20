@@ -1,6 +1,7 @@
 import './header.css';
 import {Fragment, React,useEffect,useState} from 'react';
 import logoblue from '../../assets/logo.svg'
+import logored from '../../assets/logored.svg'
 import AppBar from '@material-ui/core/AppBar';
 import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -21,10 +22,13 @@ import { Typography } from '@material-ui/core';
 import { Drawer } from '@material-ui/core';
 import ResponsiveNav from '../nav-responsive/index'
 import CloseIcon from '@material-ui/icons/Close';
+import { useHistory} from 'react-router-dom'
+
 
 function Header() {
   const classes = useStyles();
   const [t, i18n] = useTranslation("global");
+  const history = useHistory();
   const check=useAuth()
   const [open, setOpen] = useState(false);
   const [token, setToken] = useState(sessionStorage.getItem("token"))
@@ -42,7 +46,7 @@ function Header() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-
+  
 
   return (
     <div className="header-container">
@@ -119,7 +123,7 @@ function Header() {
               aria-haspopup="true"
               color="inherit"
             >
-              <Typography>{data.nombre}</Typography>
+              <Typography variant="h6">{data.nombre}</Typography>
               <AccountCircle style={{fontSize:"2.5rem"}} /> 
             </IconButton>
             </Link>
@@ -136,14 +140,20 @@ function Header() {
           {t("search.searchTitle3")}
           </Typography>
       
-          <form >
+          <form onSubmit={(e)=>{
+            e.preventDefault()
+            sessionStorage.setItem('filter', e.target.buscador.value)
+            history.push("/search")
+
+          }} >
             <Grid container spacing={3}>
               <Grid item xs={12}>
                 <Typography style={{marginTop:"1rem"}} variant="h5"> {t("search.buscando")}</Typography>
                 
                 <TextField
                   fullWidth
-                  select
+                  type="text"
+                  name="buscador"
                   variant="outlined"
                   label={t("header.ubicacion")}
 
@@ -161,7 +171,7 @@ function Header() {
               </Grid>
               <Grid item xs={12}>
                 <Button color="secondary" fullWidth type="submit" variant="contained">
-                 <Typography variant="button"> {t("header.buscador")}</Typography>
+                 <Typography type="submit" variant="button"> {t("header.buscador")}</Typography>
                 </Button>
               </Grid>
             </Grid>

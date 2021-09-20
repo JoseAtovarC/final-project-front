@@ -5,7 +5,7 @@
         "ubicacion":"Ubicación",
         "registrarme":"Registrarme",
         "sesion":"Iniciar Sesión",
-        "convertirse":"Convertirse en Ayudante"
+        "convertirse":"Convertirse en Helper"
 
     },
 
@@ -23,7 +23,9 @@
        "res3": "Para nosotros, es muy importante conocer a nuestros usuarios.",
        "res4": "Por eso, examinamos atentamente las opiniones",
        "res5": " y los perfiles de nuestros usuarios para que sepas con quién vas a viajar.",
-       "res6":"¡Reservar es muy sencillo gracias a nuestra sencilla aplicación y a su tecnología."
+       "res6":"¡Reservar es muy sencillo gracias a nuestra sencilla aplicación y a su tecnología.",
+       "quienes":"¿Quienes Somos?",
+       "porqueGo":"¿Por que Gomoving?"
 
     },
     "sectionServicios":{
@@ -31,20 +33,20 @@
         "ayuda":"Ayuda en tu mudanza",
         "resAyuda":"Busca alguien para que te eche una mano con tu mudanza pagando un precio muy bajo",
         "servCompleto":"Servicio de mudanza completo",
-        "res1":"Alguno de nuestros mozos pueden llegar a ofrecer el servicio completo ",
+        "res1":"Alguno de nuestros helpers pueden llegar a ofrecer el servicio completo ",
         "res2":"con disposicion de su coche a un precio mucho mas economico  que un servicio de mudanza convencional.",
        "otraAyuda": "Otro tipo de ayudas",
-       "res3": "Puedes solicitar a alguno de nuestros mozos ayuda con algun traslado grande",
+       "res3": "Puedes solicitar a alguno de nuestros helpers ayuda con algun traslado grande",
        "res4": "ya sea un mueble, armarios, mesas etc."
     },
     "sectionPreguntas":{
         "preguntasFreq":"Preguntas Frecuentes (FAQ)",
-        "esSeguro":"¿Es seguro contratar los mozos?",
+        "esSeguro":"¿Es seguro contratar los helpers?",
         "res1":"Estamos comprometidos a proporcionar un entorno seguro para nuestros usuarios",
-        "res2":" nuestros mozos  muestran la experiencia, las cualificaciones",
+        "res2":" nuestros helpers  muestran la experiencia, las cualificaciones",
         "res3":"así como las calificaciones y los comentarios de otros clientes.",
         "pago":"¿Cómo puedo pagar una reserva?",
-       "res4": "Una vez que hayas encontrado al mozo adecuado para lo que necesites",
+       "res4": "Una vez que hayas encontrado al helper adecuado para lo que necesites",
        "res5": "en su perfil podras contactarlo y acordar el metodo de pago que mejor les resulte.",
        "cancelar": "¿Puedo cancelar una reserva?",
        "res6":"¡Sí, por supuesto! Entendemos que los planes pueden cambiar, ",
@@ -53,11 +55,16 @@
     },
 
     "search":{
-        "searchTitle1":" Encuentra al ayudante",
+        "searchTitle1":" Encuentra al Helper",
         "searchTitle2":" ideal para tu mudanza",
         "searchTitle3":"tu alternativa a los servicios tradicionales",
         "buscando":"Estoy buscando",
-        "fecha":"Fecha"
+        "fecha":"Fecha",
+        "tarifa":"tarifa",
+        "placeHolder":"encuentra cerca de tu ciudad",
+        "ordena":"ordena de",
+        "mayor":"mayor a menor",
+        "menor":"menor a mayor"
         
     },   
     "form":{
@@ -68,7 +75,7 @@
         "confirmaContraseña":"Confirma tu Contraseña",
         "sesionbtn":"Inicia sesión",
         "registrobtn":"Registrarme",
-        "terminosCheckbox":"Acepto los Términos de servicio de xxx",
+        "terminosCheckbox":"Acepto los Términos de servicio de Gomoving",
         "recordarContraseña":"¿Has olvidado tu contraseña?",
         "recordarCorreo":"¿Has olvidado tu correo?" , 
         "nombre":"Nombre",

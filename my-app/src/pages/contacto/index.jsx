@@ -23,17 +23,18 @@ function Contacto() {
             <img className="logo" src={logoblue} alt="" />
           </Link>
           <Divider></Divider>
-          <Grid spacing={6}  maxWidth="xs">
+
+          <Grid style={{padding:"2rem"}} maxWidth="xs">
             <Typography  variant="h4">Contacto</Typography>
-            <Grid   maxWidth="xs">
+            <Grid style={{marginTop:"1rem"}}    maxWidth="xs">
             <Typography color="secondary"> Si necesitas encontrar un ayudante cerca o tienes problemas 
             con nuestra plataforma puedes contactarnos </Typography>
             </Grid>
-            <Grid   maxWidth="xs">
+            <Grid style={{marginTop:"0.5rem"}}  maxWidth="xs">
             <Typography color="secondary">Horario de atencion: Monday to Thursdsay: 8 a.m.
              to 1 p.m. and 2 p.m. to 5 p.m. and on Fridays 8 a.m. to 1 p.m. .</Typography>
              </Grid>
-             <Grid   maxWidth="xs">
+             <Grid style={{marginTop:"0.5rem"}}  maxWidth="xs">
             <Typography color="secondary">Email:xxxx@ .</Typography>
            
    

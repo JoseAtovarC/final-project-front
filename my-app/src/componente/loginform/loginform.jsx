@@ -125,13 +125,16 @@ function LoginForm() {
             </Grid>
           </Grid>
 
-          <Grid item xs={12}  spacing={3}>
-            <Typography onClick={handleClick} color="secondary">{t("form.recordarContraseña")}</Typography>
+          <Grid item xs={12}  >
+            <Typography  style={{marginBottom:"1rem"}} onClick={handleClick} color="secondary">{t("form.recordarContraseña")}</Typography>
             {/* <Typography color="secondary" >{t("form.recordarCorreo")}</Typography> */}
             <div className="btnLog-container">
               <Button color="secondary" onClick={handleToggle} type="submit" fullWidth variant="contained">
                 {t("form.sesion")}
               </Button>
+              <Backdrop className={classes.backdrop} open={open} onClick={handleClose}>
+        <CircularProgress color="inherit" />
+      </Backdrop>
             </div>
           </Grid>
         </Grid>
@@ -151,7 +154,7 @@ horizontal: 'left',
 <Container container maxWidth="xs" className={classes.search}>
 <Grid  item xs={12}>
   <Typography align="center" variant="h5">Recuperar contraseña</Typography>
-  <Typography color="secondary">Introduce el email con el que te
+  <Typography style={{marginBottom:"1rem",cursor:"pointer"}} color="secondary">Introduce el email con el que te
      has registrado y te enviaremos un enlace para recuperar tu contraseña.</Typography>
                 <form onSubmit={(e) => {
         e.preventDefault()
@@ -181,6 +184,7 @@ horizontal: 'left',
                   size="small"
                   type="email"
                   variant="outlined"
+                  style={{marginBottom:"1rem"}}
                 />
                 </form>
                 <Button color="primary"onClick={handleToggle} type="submit" fullWidth variant="contained">
@@ -189,9 +193,7 @@ horizontal: 'left',
               </Grid>
               </Container>
 </Popover>
-      {/* <Backdrop className={classes.backdrop} open={open} onClick={handleClose}>
-        <CircularProgress color="inherit" />
-      </Backdrop> */}
+     
     </Container>
 
   )

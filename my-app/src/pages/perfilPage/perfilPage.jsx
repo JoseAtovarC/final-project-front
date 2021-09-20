@@ -88,6 +88,7 @@ function PerfilPage() {
             </IconButton>
             <Typography variant="h5"> {data.nombre} </Typography>
           </Typography>
+          
           <Popover
             id={id2}
             open={open2}
@@ -105,7 +106,7 @@ function PerfilPage() {
             <Button onClick={() => {
               sessionStorage.removeItem("token")
               history.push("/")
-            }} > <Typography>Cerrar Sesión</Typography></Button>
+            }} > <Typography variant ="h6">Cerrar Sesión</Typography></Button>
           </Popover>
 
           <Grid container spacing={3} item xs={12} >

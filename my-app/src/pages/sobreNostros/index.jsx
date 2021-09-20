@@ -19,23 +19,36 @@ function Nosotros() {
         <Link to="/">
             <img className="logo" src={logoblue} alt="" />
           </Link>
-          <Divider></Divider>
-          <Grid className="about-container" spacing={3} maxWidth="xs">
-            <Typography align="center" variant="h4">Sobre xxxxx</Typography>
-            <Typography variant="h5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem deleniti neque ex reprehenderit maiores obcaecati illum minus perferendis omnis, voluptates consequuntur, consectetur 
+         
+          <Grid className="about-container"  maxWidth="xs">
+
+              <div  className="img-container">
+           
+            </div>
+
+              <Grid container  style={{padding:"2rem"}} maxWidth="xs" >
+
+                <Grid >
+                <Typography style={{marginTop:"1rem"}} align="center" variant="h4"> {t("sectionInfo.quienes")}</Typography>
+            <Typography style={{marginTop:"2rem"}} align="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem deleniti neque ex reprehenderit maiores obcaecati illum minus perferendis omnis, voluptates consequuntur, consectetur 
             saepe error voluptatum suscipit quibusdam assumenda cupiditate magnam.</Typography>
-            <Typography variant="h5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </Grid>
+            <Grid style={{marginTop:"2rem"}} >
+            <Typography align="center" variant="h4">{t("sectionInfo.porqueGo")}</Typography>
+            <Typography style={{marginTop:"2rem"}} align="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.
              Dolorem deleniti neque ex reprehenderit maiores obcaecati illum
               minus perferendis omnis, voluptates consequuntur, consectetur 
             saepe error voluptatum suscipit quibusdam assumenda cupiditate magnam.</Typography>
-            <Typography variant="h5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </Grid>
+            <Typography align="center" >Lorem ipsum dolor sit amet consectetur adipisicing elit.
              Dolorem deleniti neque ex reprehenderit maiores obcaecati illum
               minus perferendis omnis, voluptates consequuntur, consectetur 
             saepe error voluptatum suscipit quibusdam assumenda cupiditate magnam.</Typography>
    
-            <Typography variant="h5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <Typography align="center" >Lorem ipsum dolor sit amet consectetur adipisicing elit.
              Dolorem deleniti neque ex reprehenderit maiores obcaecati illum
               minus perferendis omnis</Typography>
+              </Grid>
               </Grid>
            
      

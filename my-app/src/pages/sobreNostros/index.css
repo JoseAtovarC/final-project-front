@@ -1,7 +1,12 @@
-.about-container{
+
+
+.img-container{
     background-image: url('../../assets/aboutUs.png');
     background-size: cover;
+    height: 15rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 5rem;
     display: flex;
-    flex-direction: column;
-    height: 90vh;
+    justify-content: center;
 }

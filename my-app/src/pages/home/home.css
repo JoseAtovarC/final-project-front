@@ -1,7 +1,5 @@
 
-p{
-    color: white;
-}
+
 h2{
     color: white;
 }
@@ -40,9 +38,16 @@ h3{
     
 }
 
-.carousel{
-
+.carousel1{
+    background-image: url('../../assets/reviews1.png');
     height: 90vh;
+    border-radius: 4px;
+}
+.carousel2{
+    background-image: url('../../assets/reviews2.png');
+    height: 90vh;
+    border-radius: 4px;
+   
 }
 
 .section-faq{
@@ -52,6 +57,13 @@ h3{
     justify-content: center;
     text-align: center;
    
+}
+.socialIcon{
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 1rem;
+
 }
 
 
@@ -63,6 +75,20 @@ h3{
         display: flex;
        flex-direction: column;
        justify-content: center;
+    }
+    .carousel1{
+        background-image: url('../../assets/reviews1.png');
+        height: auto;
+        border-radius: 4px;
+        background-size: cover;
+        padding: 0;
+    }
+    .carousel2{
+        background-image: url('../../assets/reviews2.png');
+        height: auto;
+        border-radius: 4px;
+        background-size: cover;
+       
     }
    
 }

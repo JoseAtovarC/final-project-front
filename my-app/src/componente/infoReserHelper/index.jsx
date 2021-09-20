@@ -8,6 +8,7 @@ import { Fragment } from 'react';
 import { Divider } from '@material-ui/core';
 
 
+
 function InfoReservasHelper(props) {
 
  
@@ -17,11 +18,12 @@ function InfoReservasHelper(props) {
   return (
 
     <Fragment>
+      
 
         <Grid >
-          <Typography variant="h5">Reservado por :{props.nombre}</Typography>
-          <Typography variant="h5">desde el día:{props.start}</Typography>
-          <Typography variant="h5">hasta el día:{props.end}</Typography>
+          <Typography style={{color:"black",marginBottom:"1rem"}}>Reservado por :{props.nombre}</Typography>
+          <Typography style={{color:"black"}}>desde el día:{props.start}</Typography>
+          <Typography style={{color:"black"}}>hasta el día:{props.end}</Typography>
           
         </Grid>
       <Divider></Divider>

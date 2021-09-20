@@ -41,9 +41,9 @@ function Ayuda() {
             <img className="logo" src={logoblue} alt="" />
           </Link>
 
-            <div  className="img-container">
-              <Typography variant="h2"> encuentra todo lo que necesitas saber para 
-                utilizar xxx.
+            <div  className="img-containerHelp">
+              <Typography variant="h2"> Encuentra todo lo que Necesitas Saber <br/> para 
+                Utilizar Gomoving.
               </Typography>
             </div>
       
@@ -68,8 +68,9 @@ function Ayuda() {
             Ayuda para Clientes
           </Typography>
           <Typography color="secondary">
-            Si eres uno de nuestros cliente haz click abajo para encontrar todo lo que necesitas saber 
-            sobre como usar xxxx
+            Si eres uno de nuestros cliente haz click abajo para encontrar todo
+             lo que necesitas saber 
+            sobre como usar Gomoving
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -92,11 +93,11 @@ function Ayuda() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" >
-          Ayuda para Ayudantes
+          Ayuda para Helpers
           </Typography>
           <Typography color="secondary">
-          Si eres uno de nuestros  ayudantes haz click abajo para encontrar todo lo que necesitas saber 
-            sobre como usar xxxx
+          Si eres uno de nuestros  helpers haz click abajo para encontrar todo lo que necesitas saber 
+            sobre como usar Gomoving
           </Typography>
         </CardContent>
       </CardActionArea>

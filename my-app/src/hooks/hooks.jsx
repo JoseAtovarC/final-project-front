@@ -50,6 +50,7 @@ export function  useGeolocation  () {
     const [counter, setCounter] = useState(0);
     const [counterClient, setCounterClient] = useState(0);
     const [dataMessage,setDataMessage]=useState(null)
+    const [dataMessageClient,setDataMessageClient]=useState(null)
  
      useEffect(() => {
          const fetchData = async () => {
@@ -59,14 +60,20 @@ export function  useGeolocation  () {
                  const data = await resp.json();
                  const arrayHelper=data.data
                  const arrayClient=data.data
-                 setDataMessage(arrayHelper)
+                 setDataMessage(arrayHelper.filter((v) => {
+                    return v.message !=="leido" && v.message !=="clienteLeido"
+                  }))
+                  setDataMessageClient(arrayHelper.filter((v) => {
+                    return v.message==="leido"
+                  }))
+
                  let contador=0
                  let contadorClient=0
                  arrayHelper.forEach((v)=>{
                      if( v.type==="pending") contador++
                      })
                      arrayClient.forEach((v)=>{
-                        if( v.type==="accepted") contadorClient++
+                        if( v.type==="accepted" && v.message ==="leido") contadorClient++
                         })
                         setCounterClient(contadorClient)
                  setCounter(contador)
@@ -79,7 +86,7 @@ export function  useGeolocation  () {
          fetchData();
      },[]);
      
-     return { counter,dataMessage,counterClient}
+     return { counter,dataMessage,counterClient,dataMessageClient}
 
 }
 
@@ -88,6 +95,8 @@ export  function useReservasFecth(url,options){
     
     
     const [data,setData]=useState(null)
+        
+    const [dataDone,setDataDone]=useState(null)
  
      useEffect(() => {
          const fetchData = async () => {
@@ -96,10 +105,15 @@ export  function useReservasFecth(url,options){
                  const resp= await fetch(url, options);
                  const data = await resp.json();
                  const array=data.data
+                 const arrayDones=data.data
                  const info=array.filter((v) => {
                     return v.type==="accepted"
                   })
+                  const infoDones=arrayDones.filter((v) => {
+                    return v.type==="done"
+                  })
                   setData(info)
+                  setDataDone(infoDones)
               ;
              } catch (e) {
                 setData(null);
@@ -109,6 +123,35 @@ export  function useReservasFecth(url,options){
          fetchData();
      },[]);
      
-     return { data}
+     return { data,dataDone}
+
+}
+
+
+
+export  function useFetchData(){ 
+    
+    
+    const [dataArray,setDataArray]=useState(null)
+    
+ 
+     useEffect(() => {
+         const fetchData = async () => {
+            
+             try {
+                 const resp= await fetch(`http://localhost:4000/data`);
+                 const data = await resp.json();
+                 setDataArray(data);
+                 
+              ;
+             } catch (e) {
+                setDataArray(null);
+                 
+             }       
+         }
+         fetchData();
+     },[]);
+     
+     return { dataArray}
 
 }

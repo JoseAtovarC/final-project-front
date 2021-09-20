@@ -1,6 +1,3 @@
-.hide.hide{
-    display: none;
-}
-.show.show{
-    display: flex;
+body{
+    overflow: scroll;
 }

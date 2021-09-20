@@ -32,7 +32,7 @@ import React from 'react';
   },
    backdrop: {
     zIndex: theme.zIndex.drawer + 1,
-    color: '#fff',
+    color: 'black',
   },
   card: {
     maxWidth: 300,
@@ -57,7 +57,9 @@ import React from 'react';
   helpercard:{
     marginLeft:"1rem",
     marginBottom:"1rem",
-    cursor:"pointer"
+    cursor:"pointer",
+    padding:"1rem",
+    
   },
   helperEdit:{
     backgroundColor:"white",
@@ -68,7 +70,9 @@ import React from 'react';
     boxShadow:' 0px 2px 2px rgba(0, 0, 0, 0.5)', 
   },
   helperDetails:{
-    padding:"2rem"
+    padding:"2rem",
+    width:"auto",
+   
   },
   message:{
     backgroundColor:"white",
@@ -90,6 +94,7 @@ export const theme = createTheme({
     letterSpacing: "5px",
     fontSize: "1.25rem",
     fontWeight:"500",
+    
     h2: {
         fontSize: "2rem",
         fontWeight:"bold",
@@ -126,9 +131,11 @@ button:{
     paper:"#151948",
     
   },
-  primary: { main: "#FA925B" },
+  primary: { main: "#FA925B",
+dark:"black" },
   secondary:{main:"#151948"},
-  info:{main:"#1C1C1E"}
+  info:{main:"#1C1C1E"},
+  
  
 } });
 
