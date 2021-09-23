@@ -3,9 +3,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import './footer.css'
-import ig from '../../assets/ig.png'
-import fb from '../../assets/fb.png'
-import twi from '../../assets/twi.png'
+
 import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
@@ -14,7 +12,7 @@ import WbSunnyIcon from '@material-ui/icons/WbSunny';
 import { useContext } from 'react'
 import { ThemeContexts } from '../../theme/theme';
 import logored from '../../assets/logored.png'
-import { Button, Typography } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import {
   Link
 } from "react-router-dom";
@@ -51,6 +49,25 @@ function Footer() {
  </Link ></li>
         <div className="barra-footer"></div>
         
+        <li className="li-footer">  
+        
+                 <Link  style={{textDecoration:"none"}} to="cookies">
+          <Typography variant="h6">cookies</Typography>
+          
+ </Link >
+ <Link  style={{textDecoration:"none"}} to="gdpr">
+          <Typography variant="h6">GDPR</Typography>
+          </Link >
+          
+ </li>
+        <div className="barra-footer"></div>
+
+        <Link  style={{textDecoration:"none"}} to="terminos">
+          <Typography variant="h6"> {t("footer.terminos")}</Typography>
+          </Link >
+
+          <div className="barra-footer"></div>
+        
 
         
 
@@ -67,7 +84,7 @@ function Footer() {
           <FormControlLabel
             control={<Switch onClick={(e) =>setTheme()} checked={auth} onChange={handleChange} 
               aria-label="login switch" />}
-            label={auth ?<WbSunnyIcon></WbSunnyIcon> :<Brightness3Icon></Brightness3Icon>  }
+            label={auth ?<WbSunnyIcon style={{color:"yellow"}}></WbSunnyIcon> :<Brightness3Icon></Brightness3Icon>  }
           />
         </FormGroup>
     </div>

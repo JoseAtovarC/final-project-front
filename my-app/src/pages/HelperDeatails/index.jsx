@@ -1,8 +1,8 @@
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
+
 import Container from '@material-ui/core/Container';
-import { Fragment, React, useEffect, useState } from 'react';
+import { Fragment, React, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useFetch,useAuth } from '../../hooks/hooks';
 import { useStyles } from '../../theme/theme';
@@ -14,12 +14,12 @@ import logoblue from '../../assets/logored.png'
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
-import { Calendar } from 'react-date-range';
+
 import { DateRangePicker } from 'react-date-range';
 import { addDays } from 'date-fns';
 import Reviews from '../../componente/reviews';
 import { useHistory } from 'react-router';
-import perfilPicture from '../../assets/pruebaPerfil.jpg'
+
 import Avatar from '@material-ui/core/Avatar';
 import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -32,8 +32,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 function HelperDetails() {
   const classes = useStyles();
   const [t, i18n] = useTranslation("global");
-  const [startDate, setStardate] = useState("");
-  const [endDate, setEnddate] = useState("");
+  
   const [token, setToken] = useState(sessionStorage.getItem("token"))
   const [open, setOpen] = useState(false);
   const { id } = useParams()
@@ -74,7 +73,7 @@ function HelperDetails() {
             <Grid style={{marginRight:"1rem"}} item md={3} >
             <Avatar
         alt=""
-        src={perfilPicture}
+        src={`http://localhost:4000/${data[1].img}`}
         style={{ width: 200, height:200 }}
       />
           </Grid>

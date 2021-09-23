@@ -6,7 +6,7 @@ import { useStyles } from '../../theme/theme';
 import { Typography } from '@material-ui/core';
 import { Fragment } from 'react';
 import { Divider } from '@material-ui/core';
-import { useFetch, useBadgeCounter } from '../../hooks/hooks';
+import { useBadgeCounter } from '../../hooks/hooks';
 import InfoMensajesClient from '../../componente/infoMensajesClient';
 import PersonIcon from '@material-ui/icons/Person';
 import { Link } from 'react-router-dom';

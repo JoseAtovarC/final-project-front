@@ -1,20 +1,20 @@
 
 import React, { useEffect } from 'react';
-import { Button, Container } from '@material-ui/core';
+
 import { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { useStyles } from '../../theme/theme';
 import { Typography } from '@material-ui/core';
 import { Fragment } from 'react';
-import { Divider } from '@material-ui/core';
-import { useBadgeCounter, useFetch } from '../../hooks/hooks';
+
+import {  useFetch } from '../../hooks/hooks';
 import ReviewsInfo from '../reviewsInfo/index';
 
 
 function Reviews(props) {
  
   const [token, setToken] = useState(sessionStorage.getItem("token"))
-  const [type, setType] = useState(sessionStorage.getItem("type"))
+ 
   const {data } = useFetch(`http://localhost:4000/reviews/${props.email}`,
    { 
     headers: {

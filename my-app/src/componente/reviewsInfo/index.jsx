@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Button, Container } from '@material-ui/core';
 import { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Rating from '@material-ui/lab/Rating';
 import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+
 import { Fragment } from 'react';
 import { Divider } from '@material-ui/core';
 
@@ -13,7 +13,6 @@ import { Divider } from '@material-ui/core';
 
 function ReviewsInfo(props) {
 
-  const [token, setToken] = useState(sessionStorage.getItem("token"))
 
 
   return (

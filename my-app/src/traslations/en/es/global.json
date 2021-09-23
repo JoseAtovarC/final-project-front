@@ -12,17 +12,17 @@
     "sectionInfo":{
         "ComoFunciona":"¿Como funciona?",
         "busca":"Busca",
-        "resFunciona":"Busca y contacta con ayudantes ",
+        "resFunciona":"Busca y contacta con Helpers ",
         "resFunciona2":"dispuestos a ayudarte en tu ciudad",
         "Reserva":"Reserva",
-        "resReserv":"Encuentra el mozo que mejor se adapte ",
+        "resReserv":"Encuentra el Helpers que mejor se adapte ",
         "resReserv2":"a lo que necesites y contactalo a traves de nuestra plataforma",
         "porque":"¿Por que?",
         "res1":"Encuentra el servicio de ayuda  para tu mudanza ",
        "res2": "que mejor se adpate a tus necesidades a un precio muy bajo.",
        "res3": "Para nosotros, es muy importante conocer a nuestros usuarios.",
        "res4": "Por eso, examinamos atentamente las opiniones",
-       "res5": " y los perfiles de nuestros usuarios para que sepas con quién vas a viajar.",
+       "res5": " y los perfiles de nuestros usuarios para que sepas con quién vas a mudarte.",
        "res6":"¡Reservar es muy sencillo gracias a nuestra sencilla aplicación y a su tecnología.",
        "quienes":"¿Quienes Somos?",
        "porqueGo":"¿Por que Gomoving?"
@@ -89,12 +89,24 @@
         "servicio":"Servicio",
         "guardarBtn":"Guardar"
     },
+
+    "Help":{
+        "title":"Encuentra todo lo que Necesitas Saber",
+        "title2":" para Utilizar Gomoving.",
+        "ayuda":"Ayuda para Clientes",
+        "ayudaH":"Ayuda para Helpers",
+        "leer":"Leer mas",
+        "contacto":"Contacto"
+    },
+
+
     "footer":{
         "España":"España",
         "Usa":"Estados Unidos",
         "sobrenosotros":"Sobre Nosotros",
         "contacto":"Contacto",
-        "ayuda":"Ayuda"
+        "ayuda":"Ayuda",
+        "terminos":"Terminos y Condiciones"
 
     }
    

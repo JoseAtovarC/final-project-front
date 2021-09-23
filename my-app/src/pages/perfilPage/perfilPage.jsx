@@ -67,6 +67,7 @@ function PerfilPage() {
     setAnchorElMensaje(null)
   };
 
+ 
   return (
 
     <Fragment>
@@ -74,6 +75,7 @@ function PerfilPage() {
         <Grid  >
           <Link to="/">
             <img className="logo" src={logoblue} alt="" />
+            
           </Link>
 
           <Typography color="secondary" align="center">
@@ -114,6 +116,7 @@ function PerfilPage() {
             <Grid item xs={12}>
 
               <PersonIcon style={{ fontSize: "4rem" }}></PersonIcon>
+              <img  src={`http://localhost:4000${data.img}`} alt=""/>
               <Button onClick={handleClick}>
                 <Typography variant="h5"> Informacion de la cuenta</Typography>
               </Button>

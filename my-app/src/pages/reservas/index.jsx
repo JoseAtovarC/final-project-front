@@ -20,7 +20,7 @@ import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 function Reservas() {
  
   const [token, setToken] = useState(sessionStorage.getItem("token"))
-  const [type, setType] = useState(sessionStorage.getItem("type"))
+
   const { data,dataDone } = useReservasFecth(`http://localhost:4000/booking/message`,
    { 
     headers: {

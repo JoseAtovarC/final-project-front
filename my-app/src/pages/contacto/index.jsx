@@ -1,21 +1,16 @@
 
 import React, { Fragment } from 'react'
-import { useState } from 'react';
+
 import { useTranslation } from 'react-i18next';
-import { Button, Grid, Typography,Container, Divider } from '@material-ui/core';
+import { Grid, Typography, Divider } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import logoblue from '../../assets/logored.png'
-import { useStyles } from '../../theme/theme';
-import ig from '../../assets/ig.png'
-import fb from '../../assets/fb.png'
-import twi from '../../assets/twi.png'
 
-import Footer from '../../componente/footer/footer';
+
 
 function Contacto() {
-  const [t, i18n] = useTranslation("global");
-  const classes = useStyles();
-  
+  const [t,] = useTranslation("global");
+ 
   return (
 
     <Fragment>
@@ -25,7 +20,7 @@ function Contacto() {
           <Divider></Divider>
 
           <Grid style={{padding:"2rem"}} maxWidth="xs">
-            <Typography  variant="h4">Contacto</Typography>
+            <Typography  variant="h4">{t("Help.contacto")}</Typography>
             <Grid style={{marginTop:"1rem"}}    maxWidth="xs">
             <Typography color="secondary"> Si necesitas encontrar un ayudante cerca o tienes problemas 
             con nuestra plataforma puedes contactarnos </Typography>

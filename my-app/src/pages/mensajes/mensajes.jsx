@@ -1,13 +1,13 @@
 
-import React, { useEffect } from 'react';
-import { Button, Container } from '@material-ui/core';
+import React from 'react';
+import { Button } from '@material-ui/core';
 import { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { useStyles } from '../../theme/theme';
 import { Typography } from '@material-ui/core';
 import { Fragment } from 'react';
 import { Divider } from '@material-ui/core';
-import { useFetch, useBadgeCounter } from '../../hooks/hooks';
+import {  useBadgeCounter } from '../../hooks/hooks';
 import InfoMensajes from '../../componente/infoMensHelper';
 import { Link } from 'react-router-dom';
 import logoblue from '../../assets/logored.png'
@@ -17,9 +17,9 @@ import PersonIcon from '@material-ui/icons/Person';
 
 function Mensajes(props) {
 
-  const [token, setToken] = useState(sessionStorage.getItem("token"))
+  const [token] = useState(sessionStorage.getItem("token"))
 
-  const { counter, dataMessage, nombre } = useBadgeCounter(`http://localhost:4000/booking/message`,
+  const {  dataMessage,  } = useBadgeCounter(`http://localhost:4000/booking/message`,
     {
       headers: {
         "Authorization": `Bearer ${token}`

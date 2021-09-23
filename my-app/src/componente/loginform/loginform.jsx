@@ -89,13 +89,22 @@ function LoginForm() {
             'Content-Type': 'application/json',
           },
         })
-          .then(res => res.json())
-          .then(data => { 
-            setToken(data.access_token)
-                       
-          })
+        .then(function (response) {
+          if (!response.ok) {
+            throw Error(response.status);
+          }
+          return response.json();;
+        }).then(data=>{ 
+           
+          setToken(data.access_token)
+       } ).catch(function (error) {
+        history.push('/signup')
+        })
 
       }}>
+
+
+
 
         <Grid container spacing={3}>
           <Grid item xs={12}>

@@ -24,6 +24,9 @@ import Mensajes from './pages/mensajes/mensajes'
 import MensajesClient from './pages/mensajesClient/index'
 import Reservas from './pages/reservas/index'
 import ReservasHelper from './pages/reservasHelper/index'
+import Cookies from './pages/cookies/index'
+import Gdpr from './pages/terminos/index'
+import Terminos from './pages/gdpr/index'
 
 i18next.init({
   interpolation: { escapeValue: false },
@@ -65,6 +68,12 @@ function App() {
             <Route exact path="/ayuda">
               <Ayuda></Ayuda>
             </Route>
+            <Route exact path="/cookies">
+              <Cookies></Cookies>
+            </Route>
+            <Route exact path="/gdpr">
+              <Gdpr></Gdpr>
+            </Route>
             <Route exact path="/helpers/:id">
               <HelperDetails></HelperDetails>
             </Route>
@@ -85,6 +94,9 @@ function App() {
             </Route>
             <Route exact path="/contacto">
               <Contacto></Contacto>
+            </Route>
+            <Route exact path="/terminos">
+              <Terminos></Terminos>
             </Route>
 
             <PrivateRoute exact path="/user">

@@ -52,11 +52,6 @@ p{
       display: none;
   }
 
-  .logo{
-      width: 20rem;
-      
-  }
-
   @media (max-width: 800px) {
     .nav-container{
         display: none;

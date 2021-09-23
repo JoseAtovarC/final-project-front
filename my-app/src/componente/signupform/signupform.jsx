@@ -15,6 +15,15 @@ import { Typography } from '@material-ui/core';
 import Backdrop from '@material-ui/core/Backdrop';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormLabel from '@material-ui/core/FormLabel';
+
+
+
+
+
+
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
@@ -26,6 +35,11 @@ function SignupForm() {
   const query = useQuery(); 
   const [isEmailValid, setEmailValidity] = useState(false); 
   const [open, setOpen] = React.useState(false);
+  const [value, setValue] = useState('female');
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
 
   useEffect(() => {
     
@@ -56,10 +70,10 @@ function SignupForm() {
      
      <Container className={classes.search} maxWidth="xs">
         
-        <Typography style={{marginBottom:"1rem"}}  variant="h4"> {t("form.registroTitle")}</Typography>
+        <Typography align="center" style={{marginBottom:"1rem"}}  variant="h4"> {t("form.registroTitle")}</Typography>
         
       <form onSubmit={(e) => {
-    
+          console.log(e.target.usuario.value)
         e.preventDefault()
         if (e.target[0].value !==""){
         if (e.target[2].value === e.target[4].value ) {
@@ -82,7 +96,9 @@ function SignupForm() {
               if (!response.ok) {
                 throw Error(response.status);
               }
-              return response;
+              return response
+              
+              ;
             }).then(data=>{  
               setpasswordAlert('Revisa tu email para continuar')
            } ).catch(function (error) {
@@ -122,7 +138,7 @@ function SignupForm() {
                   variant="outlined"
                 />
               </Grid>
-              <Grid item xs={12}>
+              <Grid  item xs={12}>
                 <TextField
                   fullWidth
                   label={t("form.confirmaContraseña")}
@@ -132,24 +148,21 @@ function SignupForm() {
                   variant="outlined"
                 />
               </Grid>
-              <Grid item xs={12}>
-                <div style={{display:"flex",flexDirection:"column"}}>
-                  <h4>Cliente</h4>
-                <TextField
-                  fullWidth
-                  value="cliente"
-                  name="usuario"
-                  type="radio"
-                  style={{marginRight:"1rem"}}
+              <Grid  item xs={12}>
+                <div style={{display:"flex", flexDirection:"column"}}>
                   
-                />
-                <h4>Ayudante</h4>
-                 <TextField
-                  fullWidth
-                  value="ayudante"
-                  name="usuario"
-                  type="radio"
-                />
+                  <div style={{display:"flex",
+                  marginTop:"2rem", marginBottom:"1rem", justifyContent:"space-around", flexDirection:"row"}}>
+                
+      <RadioGroup aria-label="gender" name="usuario" value={value} onChange={handleChange}>
+      <FormLabel component="legend"><Typography variant="h5">Elige el Tipo de Usuario</Typography></FormLabel>
+        <FormControlLabel value="cliente" control={<Radio />} label="Cliente" />
+        <FormControlLabel value="ayudante" control={<Radio />} label="Helper" />
+      
+      </RadioGroup>
+
+                      
+               </div>
                 </div>
               </Grid>
             </Grid>

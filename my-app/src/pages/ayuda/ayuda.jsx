@@ -15,12 +15,11 @@ import { useStyles } from '../../theme/theme';
 import Footer from '../../componente/footer/footer';
 import ayuda from  '../../assets/ayuda.png'
 import ayuda3 from  '../../assets/ayuda3.png'
-import { spacing } from '@material-ui/system';
 import '../ayuda/ayuda.css'
 
 
 function Ayuda() {
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
@@ -42,8 +41,7 @@ function Ayuda() {
           </Link>
 
             <div  className="img-containerHelp">
-              <Typography variant="h2"> Encuentra todo lo que Necesitas Saber <br/> para 
-                Utilizar Gomoving.
+              <Typography variant="h2"> {t("Help.title")} <br/> {t("Help.title2")}
               </Typography>
             </div>
       
@@ -65,7 +63,7 @@ function Ayuda() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" >
-            Ayuda para Clientes
+          {t("Help.ayuda")}
           </Typography>
           <Typography color="secondary">
             Si eres uno de nuestros cliente haz click abajo para encontrar todo
@@ -77,7 +75,7 @@ function Ayuda() {
       <CardActions>
         
         <Button size="small">
-        Lee mas
+        {t("Help.leer")}
         </Button>
       </CardActions>
     </Card>
@@ -93,7 +91,7 @@ function Ayuda() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" >
-          Ayuda para Helpers
+          {t("Help.ayudaH")}
           </Typography>
           <Typography color="secondary">
           Si eres uno de nuestros  helpers haz click abajo para encontrar todo lo que necesitas saber 
@@ -104,7 +102,7 @@ function Ayuda() {
       <CardActions>
        
         <Button size="small">
-          Lee mas
+        {t("Help.leer")}
         </Button>
       </CardActions>
     </Card>

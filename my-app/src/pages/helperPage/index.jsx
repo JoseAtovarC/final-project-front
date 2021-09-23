@@ -24,12 +24,8 @@ function HelperPage() {
   const [t] = useTranslation("global");
   const [token, setToken] = useState(sessionStorage.getItem("token"))
   const history = useHistory();
-  const [type, setType] = useState(sessionStorage.getItem("type"))
-  const { data, error } = useFetch(`http://localhost:4000/user/${type}`,
-   { 
-    headers: {
-    "Authorization": `Bearer ${token}`
-  }});
+  
+  
 
 
  
@@ -47,13 +43,13 @@ function HelperPage() {
       <form onSubmit={(e)=>{
         e.preventDefault()
        console.log(e.target.image.value)
-       const Img={
-         perfilPicture:e.target.image.value
-       };  fetch('http://localhost:4000/upload', {
-        method: 'POST',
-        body: JSON.stringify(Img),
+       const Img= new FormData(e.target)
+       console.log(Img)
+         fetch('http://localhost:4000/upload', {
+        method: 'PATCH',
+        body: Img,
         headers: {
-          'Content-Type': 'application/json',
+         
           "Authorization": `Bearer ${token}`
         },
       })

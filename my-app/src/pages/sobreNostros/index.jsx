@@ -1,7 +1,7 @@
 
 import React, { Fragment } from 'react'
 import { useTranslation } from 'react-i18next';
-import { Button, Grid, Typography,Container, Divider } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import logoblue from '../../assets/logored.png'
 import { useStyles } from '../../theme/theme';
@@ -11,7 +11,7 @@ import Footer from '../../componente/footer/footer';
 
 function Nosotros() {
   const [t, i18n] = useTranslation("global");
-  const classes = useStyles();
+  
   
   return (
 

@@ -13,7 +13,7 @@ import logoblue from '../../assets/logored.png'
 
 function ClientPage() {
   const [t] = useTranslation("global");
-  const [token, setToken] = useState(sessionStorage.getItem("token"))
+  const [token] = useState(sessionStorage.getItem("token"))
   const history = useHistory();
 
   return (

@@ -1,6 +1,7 @@
 import React from 'react';
  import { makeStyles } from '@material-ui/core/styles';
- import { createTheme } from '@material-ui/core/styles';
+ import { createTheme } from '@material-ui/core/styles'
+ import { createContext } from 'react';
 
 
  
@@ -60,6 +61,7 @@ import React from 'react';
     cursor:"pointer",
     padding:"1rem",
     
+    
   },
   helperEdit:{
     backgroundColor:"white",
@@ -86,7 +88,10 @@ import React from 'react';
   },
  
   
-}));
+}))
+
+
+
 
 export const theme = createTheme({
   typography: {
@@ -187,4 +192,4 @@ button:{
   info:{main:"#1C1C1E"}
 } });
 
-export const ThemeContexts = React.createContext([{},()=>{}]);
+export const ThemeContexts = createContext([{},()=>{}]);

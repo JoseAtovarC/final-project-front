@@ -9,8 +9,7 @@ import icon1 from '../../assets/1.png'
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import ig from '../../assets/ig.png'
-import twi from '../../assets/twi.png'
+
 import icon2 from '../../assets/2.png'
 import icon3 from '../../assets/3.png'
 import hands from '../../assets/hands.png'
@@ -167,10 +166,11 @@ function Home() {
           <div className="socialIcon" >
             <Grid items xs={12}>
               <FacebookIcon style={{fontSize:"3rem",
-              marginLeft:"5rem",marginRight:"5rem"}}></FacebookIcon>
+              marginLeft:"6rem",marginRight:"6rem"}}></FacebookIcon>
             </Grid>
             <Grid items xs={12}>
-              <TwitterIcon style={{fontSize:"3rem",marginRight:"2rem"}}></TwitterIcon>
+              <TwitterIcon style={{fontSize:"3rem",marginLeft:"3rem",
+              marginRight:"3rem"}}></TwitterIcon>
             </Grid>
             <Grid items xs={12}>
               <InstagramIcon style={{fontSize:"3rem"}}></InstagramIcon>

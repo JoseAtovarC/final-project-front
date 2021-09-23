@@ -20,7 +20,7 @@
        "res2": "who better to contact for your move that best suits your needs at a very low price",
        "res3":"For us, it is very important to know our users.",
        "res4": "That's why we carefully examine the opinions.",
-       "res5":  "and the profiles of our users so that you know who you will be traveling with.",
+       "res5":  "and the profiles of our users so that you know who you will be mooving with.",
        "res6":"Booking is very easy thanks to our simple application and technology.",
        "quienes":"¿About us?",
        "porqueGo":"¿Why Gomoving?"
@@ -51,6 +51,14 @@
        "res6":"Yes, of course! We understand that plans can change",
        "res7":"that's why all reservations are cancellable",
        "res8":"at any time up to 24 hours before the start of a reservation"
+    },
+    "Help":{
+        "title":"Find what you need to know",
+        "title2":" in order to use Gomoving.",
+        "ayuda":"Help for Clientes",
+        "ayudaH":"Help for Helpers",
+        "leer":"Read More",
+        "contacto":"Contact"
     },
     "form":{
         "registroTitle":"Register as a client",
@@ -94,7 +102,8 @@
         "Usa":"United States",
         "sobrenosotros":"About Us",
         "contacto":"Contact",
-        "ayuda":"Help"
+        "ayuda":"Help",
+        "terminos":"Terms and Conditions"
     }
 
     
