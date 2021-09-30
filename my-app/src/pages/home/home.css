@@ -59,12 +59,15 @@ h3{
    
 }
 .socialIcon{
-    display: flex;
-    justify-content: space-between;
     
+        display: flex;
+       flex-direction: column;
+       margin-left: 9rem; 
     padding: 1rem;
 
 }
+
+
 
 
 /** responsive****/
@@ -90,6 +93,10 @@ h3{
         background-size: cover;
        
     }
+   
+        
+    
+    
    
 }
 

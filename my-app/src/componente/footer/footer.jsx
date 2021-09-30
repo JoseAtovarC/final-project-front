@@ -61,11 +61,11 @@ function Footer() {
           
  </li>
         <div className="barra-footer"></div>
-
+        <li className="li-footer">  
         <Link  style={{textDecoration:"none"}} to="terminos">
           <Typography variant="h6"> {t("footer.terminos")}</Typography>
           </Link >
-
+          </li>
           <div className="barra-footer"></div>
         
 

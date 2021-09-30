@@ -56,7 +56,7 @@ function Header() {
   return (
     <div className="header-container">
 
-      <AppBar position="static">
+      <AppBar className={headerClasses.appBar} position="static">
 
         <Toolbar className="bar-container" >
           <Link to="/">

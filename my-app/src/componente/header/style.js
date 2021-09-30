@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 
-
+const drawerWidth = 240;
 
 export const useStyles = makeStyles((theme) => ({
     logo: {
@@ -9,5 +9,9 @@ export const useStyles = makeStyles((theme) => ({
         height: "30px",
        
         marginTop: "0.5rem"
-    }
+    },
+    appBar: {
+        width:"auto",
+        
+      },
 }))

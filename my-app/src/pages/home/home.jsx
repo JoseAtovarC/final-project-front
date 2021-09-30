@@ -9,7 +9,7 @@ import icon1 from '../../assets/1.png'
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
-
+import Box from '@material-ui/core/Box';
 import icon2 from '../../assets/2.png'
 import icon3 from '../../assets/3.png'
 import hands from '../../assets/hands.png'
@@ -107,7 +107,7 @@ function Home() {
               <Grid style={{ paddingTop: "10rem" }}>
                 <Typography variant="h2">Jean sobre Jose</Typography>
                 <Rating style={{ marginTop: "0.5rem" }} name="read-only" value={5} readOnly />
-                <Typography style={{ marginTop: "2rem" }} variant="h6">"Muy majote un amor lo amo lo volveria a contratar
+                <Typography style={{ marginTop: "2rem" }} variant="h6">"Muy majote un amor  lo volveria a contratar
                   siempre"</Typography>
               </Grid>
             </Container>
@@ -117,7 +117,7 @@ function Home() {
               <Grid style={{ paddingTop: "10rem" }}>
                 <Typography variant="h2">Paloma sobre Jose</Typography>
                 <Rating style={{ marginTop: "0.5rem" }} name="read-only" value={5} readOnly />
-                <Typography style={{ marginTop: "2rem" }} variant="h6">"Muy majote estoy enamorada de el
+                <Typography style={{ marginTop: "2rem" }} variant="h6">"Muy majo me ayudo un monton
                   en secreto"</Typography>
               </Grid>
             </Container>
@@ -159,24 +159,26 @@ function Home() {
       </Paper>
       <section style={{padding:"3rem"}}>
 
-        <Typography align="center" color="secondary">REDES SOCIALES:</Typography>
+        <Typography align="center" color="secondary">REDES SOCIALES</Typography>
         <Divider></Divider>
 
-        <Container justifyContent="space-around" maxWidth="xs">
-          <div className="socialIcon" >
-            <Grid items xs={12}>
-              <FacebookIcon style={{fontSize:"3rem",
-              marginLeft:"6rem",marginRight:"6rem"}}></FacebookIcon>
-            </Grid>
-            <Grid items xs={12}>
-              <TwitterIcon style={{fontSize:"3rem",marginLeft:"3rem",
-              marginRight:"3rem"}}></TwitterIcon>
-            </Grid>
-            <Grid items xs={12}>
+        <Box mt={4} display="flex"   justifyContent="center">
+          
+          <Box p={1} >
+              <FacebookIcon   style={{fontSize:"3rem",
+              marginBottom:"0.5rem"
+              }}></FacebookIcon>
+            </Box>
+
+            <Box p={1} >
+              <TwitterIcon style={{fontSize:"3rem",     marginBottom:"0.5rem"}}></TwitterIcon>
+            </Box>
+            
+            <Box p={1} >
               <InstagramIcon style={{fontSize:"3rem"}}></InstagramIcon>
-            </Grid>
-          </div>
-        </Container>
+            </Box>
+        
+        </Box>
       </section>
       <Footer></Footer>
 
