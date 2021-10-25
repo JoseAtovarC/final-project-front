@@ -15,7 +15,6 @@ import logoblue from '../../assets/logored.png'
 import { useFetch } from '../../hooks/hooks';
 import { Divider } from '@material-ui/core';
 import HelpersCards from '../../componente/helpersCards';
-import Card from '@material-ui/core/Card';
 import { Select } from '@material-ui/core';
 import { MenuItem } from '@material-ui/core';
 import Chip from '@material-ui/core/Chip';
@@ -31,7 +30,7 @@ function SearchPage() {
   const classes = useStyles();
   let query = useQuery();
   const [t] = useTranslation("global");
-  const { data, setData } = useFetch(`http://localhost:4000/data`)
+  const { data, setData } = useFetch(`https://gomovingback.herokuapp.com/data`)
   const [initialData, setInitialData] = useState(data);
   const [isFirstFilter, changeFirstFilter] = useState(true);
   const [initialValue, setValue] = useState("");
@@ -174,7 +173,7 @@ function SearchPage() {
                       direccion={v.direccion}
                       codigo={v.codigo}
                       tarifa={v.tarifa}
-                      img={`http://localhost:4000/${v.img}`} >
+                      img={`https://gomovingback.herokuapp.com/${v.img}`} >
                     </HelpersCards>
                   </Link>)}
             </Grid>

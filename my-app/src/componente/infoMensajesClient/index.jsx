@@ -23,7 +23,7 @@ function InfoMensajesClient(props) {
       response: "confirm",
       nombreHelper:props.nombre
     }
-    fetch('http://localhost:4000/booking/client', {
+    fetch('https://gomovingback.herokuapp.com/booking/client', {
       method: 'PATCH',
       body: JSON.stringify(res),
       headers: {

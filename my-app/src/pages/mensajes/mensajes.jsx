@@ -19,7 +19,7 @@ function Mensajes(props) {
 
   const [token] = useState(sessionStorage.getItem("token"))
 
-  const {  dataMessage,  } = useBadgeCounter(`http://localhost:4000/booking/message`,
+  const {  dataMessage,  } = useBadgeCounter(`https://gomovingback.herokuapp.com/booking/message`,
     {
       headers: {
         "Authorization": `Bearer ${token}`

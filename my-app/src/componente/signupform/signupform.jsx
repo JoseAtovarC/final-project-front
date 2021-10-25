@@ -46,7 +46,7 @@ function SignupForm() {
     const token = query.get("token"); 
     console.log(token)
     if (token) {  
-      fetch(`http://localhost:4000/signup/validate?token=${token}`) 
+      fetch(`https://gomovingback.herokuapp.com/signup/validate?token=${token}`) 
         .then((r) => {  
           setEmailValidity(true);
 
@@ -85,7 +85,7 @@ function SignupForm() {
           }
           console.log(e)
           
-          fetch('http://localhost:4000/signup', {
+          fetch('https://gomovingback.herokuapp.com/signup', {
             method: 'POST',
             body: JSON.stringify(USER),
             headers: {

@@ -45,7 +45,7 @@ function HelperPage() {
        console.log(e.target.image.value)
        const Img= new FormData(e.target)
        console.log(Img)
-         fetch('http://localhost:4000/upload', {
+         fetch('https://gomovingback.herokuapp.com/upload', {
         method: 'PATCH',
         body: Img,
         headers: {
@@ -68,7 +68,7 @@ function HelperPage() {
         tarifa:e.target.servicio.value,
         informacion:e.target.informacion.value}
         console.log(User)
-        fetch('http://localhost:4000/user/ayudante', {
+        fetch('https://gomovingback.herokuapp.com/user/ayudante', {
           method: 'PATCH',
           body: JSON.stringify(User),
           headers: {

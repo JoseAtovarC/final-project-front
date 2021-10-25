@@ -17,7 +17,7 @@ function EditPerfil(){
     const [t] = useTranslation("global");
     const [token] = useState(sessionStorage.getItem("token"))
   const [type] = useState(sessionStorage.getItem("type"))
-  const { data } = useFetch(`http://localhost:4000/user/${type}`,
+  const { data } = useFetch(`https://gomovingback.herokuapp.com/user/${type}`,
    { 
     headers: {
     "Authorization": `Bearer ${token}`
@@ -42,7 +42,7 @@ function EditPerfil(){
           tarifa:e.target[17].value,
           informacion:e.target[19].value}
           console.log(User)
-          fetch('http://localhost:4000/user/ayudante', {
+          fetch('https://gomovingback.herokuapp.com/user/ayudante', {
             method: 'PATCH',
             body: JSON.stringify(User),
             headers: {

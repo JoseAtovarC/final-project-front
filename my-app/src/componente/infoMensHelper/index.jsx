@@ -24,7 +24,7 @@ function InfoMensajes(props) {
       startDate:props.start,
       endDate:props.end
     }
-    fetch('http://localhost:4000/booking/client', {
+    fetch('https://gomovingback.herokuapp.com/booking/client', {
       method: 'PATCH',
       body: JSON.stringify(res),
       headers: {

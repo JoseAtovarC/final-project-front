@@ -14,7 +14,7 @@ function EditClientPerfil(){
     const [t] = useTranslation("global");
     const [token] = useState(sessionStorage.getItem("token"))
   const [type] = useState(sessionStorage.getItem("type"))
-  const { data } = useFetch(`http://localhost:4000/user/${type}`,
+  const { data } = useFetch(`https://gomovingback.herokuapp.com/user/${type}`,
    { 
     headers: {
     "Authorization": `Bearer ${token}`
@@ -35,7 +35,7 @@ function EditClientPerfil(){
           ciudad:e.target[10].value,
           direccion:e.target[12].value,}
           
-          fetch('http://localhost:4000/user/cliente', {
+          fetch('https://gomovingback.herokuapp.com/user/cliente', {
             method: 'PATCH',
             body: JSON.stringify(User),
             headers: {

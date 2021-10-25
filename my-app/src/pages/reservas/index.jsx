@@ -21,7 +21,7 @@ function Reservas() {
  
   const [token, setToken] = useState(sessionStorage.getItem("token"))
 
-  const { data,dataDone } = useReservasFecth(`http://localhost:4000/booking/message`,
+  const { data,dataDone } = useReservasFecth(`https://gomovingback.herokuapp.com/booking/message`,
    { 
     headers: {
     "Authorization": `Bearer ${token}`

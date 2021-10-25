@@ -32,7 +32,7 @@ function InfoReservasClient(props) {
       nombreHelper: props.nombre,
      
     }
-    fetch('http://localhost:4000/booking/client', {
+    fetch('https://gomovingback.herokuapp.com/booking/client', {
       method: 'PATCH',
       body: JSON.stringify(res),
       headers: {
@@ -80,7 +80,7 @@ function InfoReservasClient(props) {
                 endDate:props.end
               }
 
-              fetch('http://localhost:4000/reviews', {
+              fetch('https://gomovingback.herokuapp.com/reviews', {
                 method: 'POST',
                 body: JSON.stringify(reviews),
                 headers: {

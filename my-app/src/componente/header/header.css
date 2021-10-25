@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem;
+    width:auto;
 }
 .nav-container{
     display: flex;
@@ -60,5 +61,11 @@ p{
     .btn-nav{
         display: flex;
        
+    }
+    .bar-container{
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem;
+        width:20rem;
     }
 }

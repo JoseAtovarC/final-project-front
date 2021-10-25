@@ -38,7 +38,7 @@ function HelperDetails() {
   const { id } = useParams()
   const history = useHistory();
   const check=useAuth()
-  const { data } = useFetch(`http://localhost:4000/public/${id}`);
+  const { data } = useFetch(`https://gomovingback.herokuapp.com/public/${id}`);
 
 
   const [state, setState] = useState([
@@ -73,7 +73,7 @@ function HelperDetails() {
             <Grid style={{marginRight:"1rem"}} item md={3} >
             <Avatar
         alt=""
-        src={`http://localhost:4000/${data[1].img}`}
+        src={`https://gomovingback.herokuapp.com/${data[1].img}`}
         style={{ width: 200, height:200 }}
       />
           </Grid>
@@ -117,7 +117,7 @@ function HelperDetails() {
               }
 
               if (token !== undefined && token !==null) {
-                fetch('http://localhost:4000/booking', {
+                fetch('https://gomovingback.herokuapp.com/booking', {
                   method: 'POST',
                   body: JSON.stringify(Booking),
                   headers: {

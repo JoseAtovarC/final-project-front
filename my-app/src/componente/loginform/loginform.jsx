@@ -41,7 +41,7 @@ function LoginForm() {
   useEffect(() => {
    
     if (token !== undefined) {
-      fetch('http://localhost:4000/user', {
+      fetch('https://gomovingback.herokuapp.com/user', {
         method: 'GET',
         headers: {
           "Authorization": `Bearer ${token}`,
@@ -82,7 +82,7 @@ function LoginForm() {
           password: e.target[2].value,
         }
         console.log(USER)
-        fetch('http://localhost:4000/auth', {
+        fetch('https://gomovingback.herokuapp.com/auth', {
           method: 'POST',
           body: JSON.stringify(USER),
           headers: {
@@ -171,7 +171,7 @@ horizontal: 'left',
           email: e.target[0].value,
         }
         console.log(USER)
-        fetch('http://localhost:4000/auth', {
+        fetch('https://gomovingback.herokuapp.com/auth', {
           method: 'POST',
           body: JSON.stringify(USER),
           headers: {

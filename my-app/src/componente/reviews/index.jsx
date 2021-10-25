@@ -15,7 +15,7 @@ function Reviews(props) {
  
   const [token, setToken] = useState(sessionStorage.getItem("token"))
  
-  const {data } = useFetch(`http://localhost:4000/reviews/${props.email}`,
+  const {data } = useFetch(`https://gomovingback.herokuapp.com/reviews/${props.email}`,
    { 
     headers: {
     "Authorization": `Bearer ${token}`

@@ -37,14 +37,14 @@ function PerfilPage() {
   const [token, setToken] = useState(sessionStorage.getItem("token"))
   const [type, setType] = useState(sessionStorage.getItem("type"))
   const history = useHistory();
-  const { data } = useFetch(`http://localhost:4000/user/${type}`,
+  const { data } = useFetch(`https://gomovingback.herokuapp.com/user/${type}`,
     {
       headers: {
         "Authorization": `Bearer ${token}`
       }
     });
 
-    const { counter,dataMessage,counterClient } = useBadgeCounter(`http://localhost:4000/booking/message`,
+    const { counter,dataMessage,counterClient } = useBadgeCounter(`https://gomovingback.herokuapp.com/booking/message`,
      { 
       headers: {
       "Authorization": `Bearer ${token}`
@@ -116,7 +116,7 @@ function PerfilPage() {
             <Grid item xs={12}>
 
               <PersonIcon style={{ fontSize: "4rem" }}></PersonIcon>
-              <img  src={`http://localhost:4000${data.img}`} alt=""/>
+              <img  src={`https://gomovingback.herokuapp.com${data.img}`} alt=""/>
               <Button onClick={handleClick}>
                 <Typography variant="h5"> Informacion de la cuenta</Typography>
               </Button>

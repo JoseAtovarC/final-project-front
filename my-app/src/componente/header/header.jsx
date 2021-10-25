@@ -37,7 +37,7 @@ function Header() {
   const [open, setOpen] = useState(false);
   const [token] = useState(sessionStorage.getItem("token"))
   const [type] = useState(sessionStorage.getItem("type"))
-  const { data } = useFetch(`http://localhost:4000/user/${type}`,
+  const { data } = useFetch(`https://gomovingback.herokuapp.com/user/${type}`,
     {
       headers: {
         "Authorization": `Bearer ${token}`
@@ -54,7 +54,7 @@ function Header() {
 
 
   return (
-    <div className="header-container">
+    <div>
 
       <AppBar className={headerClasses.appBar} position="static">
 

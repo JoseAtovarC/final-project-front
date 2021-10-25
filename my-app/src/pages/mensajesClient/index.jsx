@@ -17,7 +17,7 @@ import logoblue from '../../assets/logored.png'
 function MensajesClient(props) {
  
   const [token, setToken] = useState(sessionStorage.getItem("token"))
-  const { counter,dataMessage,dataMessageClient } = useBadgeCounter(`http://localhost:4000/booking/message`,
+  const { counter,dataMessage,dataMessageClient } = useBadgeCounter(`https://gomovingback.herokuapp.com/booking/message`,
   { 
    headers: {
    "Authorization": `Bearer ${token}`

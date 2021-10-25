@@ -34,7 +34,7 @@ function ClientPage() {
         ciudad:e.target[8].value,
         direccion:e.target[10].value,}
         
-        fetch('http://localhost:4000/user/cliente', {
+        fetch('https://gomovingback.herokuapp.com/user/cliente', {
           method: 'PATCH',
           body: JSON.stringify(User),
           headers: {

@@ -139,7 +139,7 @@ export  function useFetchData(){
          const fetchData = async () => {
             
              try {
-                 const resp= await fetch(`http://localhost:4000/data`);
+                 const resp= await fetch(`http://https://gomovingback.herokuapp.com/data`);
                  const data = await resp.json();
                  setDataArray(data);
                  
