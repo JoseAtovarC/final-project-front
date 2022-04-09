@@ -27,6 +27,7 @@ import ReservasHelper from './pages/reservasHelper/index'
 import Cookies from './pages/cookies/index'
 import Gdpr from './pages/terminos/index'
 import Terminos from './pages/gdpr/index'
+import { HelmetProvider } from "react-helmet-async";
 
 i18next.init({
   interpolation: { escapeValue: false },
@@ -46,6 +47,7 @@ function App() {
 
   return (
     <Wrapper>
+         <HelmetProvider>
 
       <I18nextProvider i18n={i18next} >
         <Router>
@@ -114,6 +116,7 @@ function App() {
           </Switch>
         </Router>
       </I18nextProvider>
+      </HelmetProvider>
 
     </Wrapper>
   );

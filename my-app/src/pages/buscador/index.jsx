@@ -19,6 +19,7 @@ import { Select } from '@material-ui/core';
 import { MenuItem } from '@material-ui/core';
 import Chip from '@material-ui/core/Chip';
 import Mapa from '../../componente/mapa';
+import { Helmet } from 'react-helmet-async';
 
 
 function useQuery(){
@@ -77,6 +78,22 @@ function SearchPage() {
 
   return (
     <Fragment >
+      <Helmet>
+       <title>Gomoving</title>
+    <meta
+      name="description"
+      content="app web para mudanzas"/>
+       <meta name="title" content="Gomoving"/>
+<meta name="description" content="app web para mudanzas"/>
+{/* 
+<!-- Open Graph / Facebook --> */}
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://gomoving.herokuapp.com/"/>
+<meta property="og:title" content="Gomoving"/>
+<meta property="og:description" content="app web para mudanzas"/>
+
+
+    </Helmet>
       <Link to="/">
         <img className="logo" src={logoblue} alt="" />
       </Link>

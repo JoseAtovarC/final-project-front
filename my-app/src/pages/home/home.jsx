@@ -19,13 +19,30 @@ import { Container, Divider, Grid, Typography } from '@material-ui/core';
 import { Carousel } from 'react-responsive-carousel'
 import Rating from '@material-ui/lab/Rating';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Helmet } from 'react-helmet-async';
 
 function Home() {
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
 
 
   return (
     <Fragment>
+       <Helmet>
+    <title>Gomoving</title>
+    <meta
+      name="description"
+      content="app web para mudanzas"/>
+       <meta name="title" content="Gomoving"/>
+<meta name="description" content="app web para mudanzas"/>
+{/* 
+<!-- Open Graph / Facebook --> */}
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://gomoving.herokuapp.com/"/>
+<meta property="og:title" content="Gomoving"/>
+<meta property="og:description" content="app web para mudanzas"/>
+
+
+    </Helmet>
 
       <Header></Header>
 
